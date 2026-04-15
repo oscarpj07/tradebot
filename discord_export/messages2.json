@@ -1,0 +1,2010 @@
+[
+  {
+    "type": 0,
+    "content": "",
+    "mentions": [],
+    "mention_roles": [],
+    "attachments": [],
+    "embeds": [
+      {
+        "type": "rich",
+        "description": "Bearish Continuation on 1 Hour",
+        "color": 15745079,
+        "timestamp": "2026-04-10T16:08:50.070000+00:00",
+        "fields": [
+          {
+            "name": "Symbol",
+            "value": "IBM",
+            "inline": true
+          },
+          {
+            "name": "Entry",
+            "value": "233.5",
+            "inline": true
+          },
+          {
+            "name": "Position",
+            "value": "Short",
+            "inline": true
+          },
+          {
+            "name": "Target",
+            "value": "232.35",
+            "inline": true
+          },
+          {
+            "name": "Stoploss",
+            "value": "235.79",
+            "inline": true
+          },
+          {
+            "name": "Potential Profit",
+            "value": "1.16",
+            "inline": true
+          }
+        ],
+        "author": {
+          "name": "Scalp Trade Idea",
+          "url": "https://tradytics.com/",
+          "icon_url": "https://tradytics.com/static/assets/images/icon-type-2-red.png",
+          "proxy_icon_url": "https://images-ext-1.discordapp.net/external/pGfXckc4pnT_Bd4-sUYzCEvTkvS1PKPl2J9ddy0ufAg/https/tradytics.com/static/assets/images/icon-type-2-red.png"
+        },
+        "thumbnail": {
+          "url": "https://tradytics.com/static/assets/images/icon-type-2-red.png",
+          "proxy_url": "https://images-ext-1.discordapp.net/external/pGfXckc4pnT_Bd4-sUYzCEvTkvS1PKPl2J9ddy0ufAg/https/tradytics.com/static/assets/images/icon-type-2-red.png",
+          "width": 571,
+          "height": 283,
+          "content_type": "image/png",
+          "placeholder": "3lqDAoAXd3d3d493d29V9WdnZgeIZ2k=",
+          "placeholder_version": 1,
+          "flags": 0
+        },
+        "footer": {
+          "text": "Data by Tradytics"
+        },
+        "content_scan_version": 4
+      }
+    ],
+    "timestamp": "2026-04-10T16:08:51.846000+00:00",
+    "edited_timestamp": null,
+    "flags": 0,
+    "components": [],
+    "id": "1492194665309667635",
+    "channel_id": "1470340659922735209",
+    "author": {
+      "id": "1470341972634894399",
+      "username": "Captain Hook",
+      "avatar": null,
+      "discriminator": "0000",
+      "public_flags": 0,
+      "flags": 0,
+      "bot": true,
+      "global_name": null,
+      "clan": null,
+      "primary_guild": null
+    },
+    "pinned": false,
+    "mention_everyone": false,
+    "tts": false,
+    "webhook_id": "1470341972634894399"
+  },
+  {
+    "type": 0,
+    "content": "",
+    "mentions": [],
+    "mention_roles": [],
+    "attachments": [],
+    "embeds": [
+      {
+        "type": "rich",
+        "description": "Bullish Continuation on 1 Day",
+        "color": 3982519,
+        "timestamp": "2026-04-07T17:58:04.085000+00:00",
+        "fields": [
+          {
+            "name": "Symbol",
+            "value": "DE",
+            "inline": true
+          },
+          {
+            "name": "Entry",
+            "value": "575.8",
+            "inline": true
+          },
+          {
+            "name": "Position",
+            "value": "Long",
+            "inline": true
+          },
+          {
+            "name": "Target",
+            "value": "580.69",
+            "inline": true
+          },
+          {
+            "name": "Stoploss",
+            "value": "566.66",
+            "inline": true
+          },
+          {
+            "name": "Potential Profit",
+            "value": "4.94",
+            "inline": true
+          }
+        ],
+        "author": {
+          "name": "Scalp Trade Idea",
+          "url": "https://tradytics.com/",
+          "icon_url": "https://tradytics.com/static/assets/images/icon-type-2.png",
+          "proxy_icon_url": "https://images-ext-1.discordapp.net/external/aF9bKo-A7Cvaj5zea45Kmd-Xc40iR5u4LoMkt7egwCI/https/tradytics.com/static/assets/images/icon-type-2.png"
+        },
+        "thumbnail": {
+          "url": "https://tradytics.com/static/assets/images/icon-type-2.png",
+          "proxy_url": "https://images-ext-1.discordapp.net/external/aF9bKo-A7Cvaj5zea45Kmd-Xc40iR5u4LoMkt7egwCI/https/tradytics.com/static/assets/images/icon-type-2.png",
+          "width": 571,
+          "height": 283,
+          "content_type": "image/png",
+          "placeholder": "IdaAAoAXh4eIh3DJun90BWdnZgeIZ2k=",
+          "placeholder_version": 1,
+          "flags": 0
+        },
+        "footer": {
+          "text": "Data by Tradytics"
+        },
+        "content_scan_version": 4
+      }
+    ],
+    "timestamp": "2026-04-07T17:58:04.132000+00:00",
+    "edited_timestamp": null,
+    "flags": 0,
+    "components": [],
+    "id": "1491134983992250370",
+    "channel_id": "1470340659922735209",
+    "author": {
+      "id": "1470341972634894399",
+      "username": "Captain Hook",
+      "avatar": null,
+      "discriminator": "0000",
+      "public_flags": 0,
+      "flags": 0,
+      "bot": true,
+      "global_name": null,
+      "clan": null,
+      "primary_guild": null
+    },
+    "pinned": false,
+    "mention_everyone": false,
+    "tts": false,
+    "webhook_id": "1470341972634894399"
+  },
+  {
+    "type": 0,
+    "content": "",
+    "mentions": [],
+    "mention_roles": [],
+    "attachments": [],
+    "embeds": [
+      {
+        "type": "rich",
+        "description": "Bearish Reversal on 1 Day",
+        "color": 15745079,
+        "timestamp": "2026-04-07T16:27:52.634000+00:00",
+        "fields": [
+          {
+            "name": "Symbol",
+            "value": "KGC",
+            "inline": true
+          },
+          {
+            "name": "Entry",
+            "value": "31.2",
+            "inline": true
+          },
+          {
+            "name": "Position",
+            "value": "Short",
+            "inline": true
+          },
+          {
+            "name": "Target",
+            "value": "30.13",
+            "inline": true
+          },
+          {
+            "name": "Stoploss",
+            "value": "31.81",
+            "inline": true
+          },
+          {
+            "name": "Potential Profit",
+            "value": "1.06",
+            "inline": true
+          }
+        ],
+        "author": {
+          "name": "Scalp Trade Idea",
+          "url": "https://tradytics.com/",
+          "icon_url": "https://tradytics.com/static/assets/images/icon-type-2-red.png",
+          "proxy_icon_url": "https://images-ext-1.discordapp.net/external/pGfXckc4pnT_Bd4-sUYzCEvTkvS1PKPl2J9ddy0ufAg/https/tradytics.com/static/assets/images/icon-type-2-red.png"
+        },
+        "thumbnail": {
+          "url": "https://tradytics.com/static/assets/images/icon-type-2-red.png",
+          "proxy_url": "https://images-ext-1.discordapp.net/external/pGfXckc4pnT_Bd4-sUYzCEvTkvS1PKPl2J9ddy0ufAg/https/tradytics.com/static/assets/images/icon-type-2-red.png",
+          "width": 571,
+          "height": 283,
+          "content_type": "image/png",
+          "placeholder": "3lqDAoAXd3d3d493d29V9WdnZgeIZ2k=",
+          "placeholder_version": 1,
+          "flags": 0
+        },
+        "footer": {
+          "text": "Data by Tradytics"
+        },
+        "content_scan_version": 4
+      }
+    ],
+    "timestamp": "2026-04-07T16:27:52.706000+00:00",
+    "edited_timestamp": null,
+    "flags": 0,
+    "components": [],
+    "id": "1491112286826270743",
+    "channel_id": "1470340659922735209",
+    "author": {
+      "id": "1470341972634894399",
+      "username": "Captain Hook",
+      "avatar": null,
+      "discriminator": "0000",
+      "public_flags": 0,
+      "flags": 0,
+      "bot": true,
+      "global_name": null,
+      "clan": null,
+      "primary_guild": null
+    },
+    "pinned": false,
+    "mention_everyone": false,
+    "tts": false,
+    "webhook_id": "1470341972634894399"
+  },
+  {
+    "type": 0,
+    "content": "",
+    "mentions": [],
+    "mention_roles": [],
+    "attachments": [],
+    "embeds": [
+      {
+        "type": "rich",
+        "description": "Bullish Continuation on 1 Hour",
+        "color": 3982519,
+        "timestamp": "2026-04-02T17:07:49.189000+00:00",
+        "fields": [
+          {
+            "name": "Symbol",
+            "value": "V",
+            "inline": true
+          },
+          {
+            "name": "Entry",
+            "value": "301.4",
+            "inline": true
+          },
+          {
+            "name": "Position",
+            "value": "Long",
+            "inline": true
+          },
+          {
+            "name": "Target",
+            "value": "302.35",
+            "inline": true
+          },
+          {
+            "name": "Stoploss",
+            "value": "299.76",
+            "inline": true
+          },
+          {
+            "name": "Potential Profit",
+            "value": "1.0",
+            "inline": true
+          }
+        ],
+        "author": {
+          "name": "Scalp Trade Idea",
+          "url": "https://tradytics.com/",
+          "icon_url": "https://tradytics.com/static/assets/images/icon-type-2.png",
+          "proxy_icon_url": "https://images-ext-1.discordapp.net/external/aF9bKo-A7Cvaj5zea45Kmd-Xc40iR5u4LoMkt7egwCI/https/tradytics.com/static/assets/images/icon-type-2.png"
+        },
+        "thumbnail": {
+          "url": "https://tradytics.com/static/assets/images/icon-type-2.png",
+          "proxy_url": "https://images-ext-1.discordapp.net/external/aF9bKo-A7Cvaj5zea45Kmd-Xc40iR5u4LoMkt7egwCI/https/tradytics.com/static/assets/images/icon-type-2.png",
+          "width": 571,
+          "height": 283,
+          "content_type": "image/png",
+          "placeholder": "IdaAAoAXh4eIh3DJun90BWdnZgeIZ2k=",
+          "placeholder_version": 1,
+          "flags": 0
+        },
+        "footer": {
+          "text": "Data by Tradytics"
+        },
+        "content_scan_version": 4
+      }
+    ],
+    "timestamp": "2026-04-02T17:07:49.332000+00:00",
+    "edited_timestamp": null,
+    "flags": 0,
+    "components": [],
+    "id": "1489310399676420146",
+    "channel_id": "1470340659922735209",
+    "author": {
+      "id": "1470341972634894399",
+      "username": "Captain Hook",
+      "avatar": null,
+      "discriminator": "0000",
+      "public_flags": 0,
+      "flags": 0,
+      "bot": true,
+      "global_name": null,
+      "clan": null,
+      "primary_guild": null
+    },
+    "pinned": false,
+    "mention_everyone": false,
+    "tts": false,
+    "webhook_id": "1470341972634894399"
+  },
+  {
+    "type": 0,
+    "content": "",
+    "mentions": [],
+    "mention_roles": [],
+    "attachments": [],
+    "embeds": [
+      {
+        "type": "rich",
+        "description": "Bearish Reversal on 30 Min",
+        "color": 15745079,
+        "timestamp": "2026-03-27T15:32:43.764000+00:00",
+        "fields": [
+          {
+            "name": "Symbol",
+            "value": "BA",
+            "inline": true
+          },
+          {
+            "name": "Entry",
+            "value": "191.6",
+            "inline": true
+          },
+          {
+            "name": "Position",
+            "value": "Short",
+            "inline": true
+          },
+          {
+            "name": "Target",
+            "value": "190.84",
+            "inline": true
+          },
+          {
+            "name": "Stoploss",
+            "value": "192.2",
+            "inline": true
+          },
+          {
+            "name": "Potential Profit",
+            "value": "0.79",
+            "inline": true
+          }
+        ],
+        "author": {
+          "name": "Scalp Trade Idea",
+          "url": "https://tradytics.com/",
+          "icon_url": "https://tradytics.com/static/assets/images/icon-type-2-red.png",
+          "proxy_icon_url": "https://images-ext-1.discordapp.net/external/pGfXckc4pnT_Bd4-sUYzCEvTkvS1PKPl2J9ddy0ufAg/https/tradytics.com/static/assets/images/icon-type-2-red.png"
+        },
+        "thumbnail": {
+          "url": "https://tradytics.com/static/assets/images/icon-type-2-red.png",
+          "proxy_url": "https://images-ext-1.discordapp.net/external/pGfXckc4pnT_Bd4-sUYzCEvTkvS1PKPl2J9ddy0ufAg/https/tradytics.com/static/assets/images/icon-type-2-red.png",
+          "width": 571,
+          "height": 283,
+          "content_type": "image/png",
+          "placeholder": "3lqDAoAXd3d3d493d29V9WdnZgeIZ2k=",
+          "placeholder_version": 1,
+          "flags": 0
+        },
+        "footer": {
+          "text": "Data by Tradytics"
+        },
+        "content_scan_version": 4
+      }
+    ],
+    "timestamp": "2026-03-27T15:32:43.880000+00:00",
+    "edited_timestamp": null,
+    "flags": 0,
+    "components": [],
+    "id": "1487112142082539561",
+    "channel_id": "1470340659922735209",
+    "author": {
+      "id": "1470341972634894399",
+      "username": "Captain Hook",
+      "avatar": null,
+      "discriminator": "0000",
+      "public_flags": 0,
+      "flags": 0,
+      "bot": true,
+      "global_name": null,
+      "clan": null,
+      "primary_guild": null
+    },
+    "pinned": false,
+    "mention_everyone": false,
+    "tts": false,
+    "webhook_id": "1470341972634894399"
+  },
+  {
+    "type": 0,
+    "content": "",
+    "mentions": [],
+    "mention_roles": [],
+    "attachments": [],
+    "embeds": [
+      {
+        "type": "rich",
+        "description": "Bearish Reversal on 1 Day",
+        "color": 15745079,
+        "timestamp": "2026-03-23T20:15:00.796000+00:00",
+        "fields": [
+          {
+            "name": "Symbol",
+            "value": "FDX",
+            "inline": true
+          },
+          {
+            "name": "Entry",
+            "value": "355.9",
+            "inline": true
+          },
+          {
+            "name": "Position",
+            "value": "Short",
+            "inline": true
+          },
+          {
+            "name": "Target",
+            "value": "344.15",
+            "inline": true
+          },
+          {
+            "name": "Stoploss",
+            "value": "383.18",
+            "inline": true
+          },
+          {
+            "name": "Potential Profit",
+            "value": "11.71",
+            "inline": true
+          }
+        ],
+        "author": {
+          "name": "Scalp Trade Idea",
+          "url": "https://tradytics.com/",
+          "icon_url": "https://tradytics.com/static/assets/images/icon-type-2-red.png",
+          "proxy_icon_url": "https://images-ext-1.discordapp.net/external/pGfXckc4pnT_Bd4-sUYzCEvTkvS1PKPl2J9ddy0ufAg/https/tradytics.com/static/assets/images/icon-type-2-red.png"
+        },
+        "thumbnail": {
+          "url": "https://tradytics.com/static/assets/images/icon-type-2-red.png",
+          "proxy_url": "https://images-ext-1.discordapp.net/external/pGfXckc4pnT_Bd4-sUYzCEvTkvS1PKPl2J9ddy0ufAg/https/tradytics.com/static/assets/images/icon-type-2-red.png",
+          "width": 571,
+          "height": 283,
+          "content_type": "image/png",
+          "placeholder": "3lqDAoAXd3d3d493d29V9WdnZgeIZ2k=",
+          "placeholder_version": 1,
+          "flags": 0
+        },
+        "footer": {
+          "text": "Data by Tradytics"
+        },
+        "content_scan_version": 4
+      }
+    ],
+    "timestamp": "2026-03-23T20:15:00.920000+00:00",
+    "edited_timestamp": null,
+    "flags": 0,
+    "components": [],
+    "id": "1485733629714890812",
+    "channel_id": "1470340659922735209",
+    "author": {
+      "id": "1470341972634894399",
+      "username": "Captain Hook",
+      "avatar": null,
+      "discriminator": "0000",
+      "public_flags": 0,
+      "flags": 0,
+      "bot": true,
+      "global_name": null,
+      "clan": null,
+      "primary_guild": null
+    },
+    "pinned": false,
+    "mention_everyone": false,
+    "tts": false,
+    "webhook_id": "1470341972634894399"
+  },
+  {
+    "type": 0,
+    "content": "",
+    "mentions": [],
+    "mention_roles": [],
+    "attachments": [],
+    "embeds": [
+      {
+        "type": "rich",
+        "description": "Bullish Reversal on 1 Hour",
+        "color": 3982519,
+        "timestamp": "2026-03-19T17:22:58.576000+00:00",
+        "fields": [
+          {
+            "name": "Symbol",
+            "value": "CHRW",
+            "inline": true
+          },
+          {
+            "name": "Entry",
+            "value": "173.8",
+            "inline": true
+          },
+          {
+            "name": "Position",
+            "value": "Long",
+            "inline": true
+          },
+          {
+            "name": "Target",
+            "value": "175.12",
+            "inline": true
+          },
+          {
+            "name": "Stoploss",
+            "value": "173.06",
+            "inline": true
+          },
+          {
+            "name": "Potential Profit",
+            "value": "1.33",
+            "inline": true
+          }
+        ],
+        "author": {
+          "name": "Scalp Trade Idea",
+          "url": "https://tradytics.com/",
+          "icon_url": "https://tradytics.com/static/assets/images/icon-type-2.png",
+          "proxy_icon_url": "https://images-ext-1.discordapp.net/external/aF9bKo-A7Cvaj5zea45Kmd-Xc40iR5u4LoMkt7egwCI/https/tradytics.com/static/assets/images/icon-type-2.png"
+        },
+        "thumbnail": {
+          "url": "https://tradytics.com/static/assets/images/icon-type-2.png",
+          "proxy_url": "https://images-ext-1.discordapp.net/external/aF9bKo-A7Cvaj5zea45Kmd-Xc40iR5u4LoMkt7egwCI/https/tradytics.com/static/assets/images/icon-type-2.png",
+          "width": 571,
+          "height": 283,
+          "content_type": "image/png",
+          "placeholder": "IdaAAoAXh4eIh3DJun90BWdnZgeIZ2k=",
+          "placeholder_version": 1,
+          "flags": 0
+        },
+        "footer": {
+          "text": "Data by Tradytics"
+        },
+        "content_scan_version": 4
+      }
+    ],
+    "timestamp": "2026-03-19T17:22:58.710000+00:00",
+    "edited_timestamp": null,
+    "flags": 0,
+    "components": [],
+    "id": "1484240783765803049",
+    "channel_id": "1470340659922735209",
+    "author": {
+      "id": "1470341972634894399",
+      "username": "Captain Hook",
+      "avatar": null,
+      "discriminator": "0000",
+      "public_flags": 0,
+      "flags": 0,
+      "bot": true,
+      "global_name": null,
+      "clan": null,
+      "primary_guild": null
+    },
+    "pinned": false,
+    "mention_everyone": false,
+    "tts": false,
+    "webhook_id": "1470341972634894399"
+  },
+  {
+    "type": 0,
+    "content": "",
+    "mentions": [],
+    "mention_roles": [],
+    "attachments": [],
+    "embeds": [
+      {
+        "type": "rich",
+        "description": "Bullish Reversal on 1 Hour",
+        "color": 3982519,
+        "timestamp": "2026-03-18T16:37:56.749000+00:00",
+        "fields": [
+          {
+            "name": "Symbol",
+            "value": "UNH",
+            "inline": true
+          },
+          {
+            "name": "Entry",
+            "value": "286.4",
+            "inline": true
+          },
+          {
+            "name": "Position",
+            "value": "Long",
+            "inline": true
+          },
+          {
+            "name": "Target",
+            "value": "287.52",
+            "inline": true
+          },
+          {
+            "name": "Stoploss",
+            "value": "285.24",
+            "inline": true
+          },
+          {
+            "name": "Potential Profit",
+            "value": "1.1",
+            "inline": true
+          }
+        ],
+        "author": {
+          "name": "Scalp Trade Idea",
+          "url": "https://tradytics.com/",
+          "icon_url": "https://tradytics.com/static/assets/images/icon-type-2.png",
+          "proxy_icon_url": "https://images-ext-1.discordapp.net/external/aF9bKo-A7Cvaj5zea45Kmd-Xc40iR5u4LoMkt7egwCI/https/tradytics.com/static/assets/images/icon-type-2.png"
+        },
+        "thumbnail": {
+          "url": "https://tradytics.com/static/assets/images/icon-type-2.png",
+          "proxy_url": "https://images-ext-1.discordapp.net/external/aF9bKo-A7Cvaj5zea45Kmd-Xc40iR5u4LoMkt7egwCI/https/tradytics.com/static/assets/images/icon-type-2.png",
+          "width": 571,
+          "height": 283,
+          "content_type": "image/png",
+          "placeholder": "IdaAAoAXh4eIh3DJun90BWdnZgeIZ2k=",
+          "placeholder_version": 1,
+          "flags": 0
+        },
+        "footer": {
+          "text": "Data by Tradytics"
+        },
+        "content_scan_version": 4
+      }
+    ],
+    "timestamp": "2026-03-18T16:37:56.895000+00:00",
+    "edited_timestamp": null,
+    "flags": 0,
+    "components": [],
+    "id": "1483867063666868455",
+    "channel_id": "1470340659922735209",
+    "author": {
+      "id": "1470341972634894399",
+      "username": "Captain Hook",
+      "avatar": null,
+      "discriminator": "0000",
+      "public_flags": 0,
+      "flags": 0,
+      "bot": true,
+      "global_name": null,
+      "clan": null,
+      "primary_guild": null
+    },
+    "pinned": false,
+    "mention_everyone": false,
+    "tts": false,
+    "webhook_id": "1470341972634894399"
+  },
+  {
+    "type": 0,
+    "content": "",
+    "mentions": [],
+    "mention_roles": [],
+    "attachments": [],
+    "embeds": [
+      {
+        "type": "rich",
+        "description": "Bullish Reversal on 1 Day",
+        "color": 3982519,
+        "timestamp": "2026-03-16T21:43:46.984000+00:00",
+        "fields": [
+          {
+            "name": "Symbol",
+            "value": "SE",
+            "inline": true
+          },
+          {
+            "name": "Entry",
+            "value": "87.5",
+            "inline": true
+          },
+          {
+            "name": "Position",
+            "value": "Long",
+            "inline": true
+          },
+          {
+            "name": "Target",
+            "value": "89",
+            "inline": true
+          },
+          {
+            "name": "Stoploss",
+            "value": "84.91",
+            "inline": true
+          },
+          {
+            "name": "Potential Profit",
+            "value": "1.49",
+            "inline": true
+          }
+        ],
+        "author": {
+          "name": "Scalp Trade Idea",
+          "url": "https://tradytics.com/",
+          "icon_url": "https://tradytics.com/static/assets/images/icon-type-2.png",
+          "proxy_icon_url": "https://images-ext-1.discordapp.net/external/aF9bKo-A7Cvaj5zea45Kmd-Xc40iR5u4LoMkt7egwCI/https/tradytics.com/static/assets/images/icon-type-2.png"
+        },
+        "thumbnail": {
+          "url": "https://tradytics.com/static/assets/images/icon-type-2.png",
+          "proxy_url": "https://images-ext-1.discordapp.net/external/aF9bKo-A7Cvaj5zea45Kmd-Xc40iR5u4LoMkt7egwCI/https/tradytics.com/static/assets/images/icon-type-2.png",
+          "width": 571,
+          "height": 283,
+          "content_type": "image/png",
+          "placeholder": "IdaAAoAXh4eIh3DJun90BWdnZgeIZ2k=",
+          "placeholder_version": 1,
+          "flags": 0
+        },
+        "footer": {
+          "text": "Data by Tradytics"
+        },
+        "content_scan_version": 4
+      }
+    ],
+    "timestamp": "2026-03-16T21:43:47.149000+00:00",
+    "edited_timestamp": null,
+    "flags": 0,
+    "components": [],
+    "id": "1483219254479159347",
+    "channel_id": "1470340659922735209",
+    "author": {
+      "id": "1470341972634894399",
+      "username": "Captain Hook",
+      "avatar": null,
+      "discriminator": "0000",
+      "public_flags": 0,
+      "flags": 0,
+      "bot": true,
+      "global_name": null,
+      "clan": null,
+      "primary_guild": null
+    },
+    "pinned": false,
+    "mention_everyone": false,
+    "tts": false,
+    "webhook_id": "1470341972634894399"
+  },
+  {
+    "type": 0,
+    "content": "",
+    "mentions": [],
+    "mention_roles": [],
+    "attachments": [],
+    "embeds": [
+      {
+        "type": "rich",
+        "description": "Bearish Continuation on 1 Hour",
+        "color": 15745079,
+        "timestamp": "2026-03-13T17:08:45.215000+00:00",
+        "fields": [
+          {
+            "name": "Symbol",
+            "value": "NUE",
+            "inline": true
+          },
+          {
+            "name": "Entry",
+            "value": "163.9",
+            "inline": true
+          },
+          {
+            "name": "Position",
+            "value": "Short",
+            "inline": true
+          },
+          {
+            "name": "Target",
+            "value": "162.74",
+            "inline": true
+          },
+          {
+            "name": "Stoploss",
+            "value": "164.58",
+            "inline": true
+          },
+          {
+            "name": "Potential Profit",
+            "value": "1.19",
+            "inline": true
+          }
+        ],
+        "author": {
+          "name": "Scalp Trade Idea",
+          "url": "https://tradytics.com/",
+          "icon_url": "https://tradytics.com/static/assets/images/icon-type-2-red.png",
+          "proxy_icon_url": "https://images-ext-1.discordapp.net/external/pGfXckc4pnT_Bd4-sUYzCEvTkvS1PKPl2J9ddy0ufAg/https/tradytics.com/static/assets/images/icon-type-2-red.png"
+        },
+        "thumbnail": {
+          "url": "https://tradytics.com/static/assets/images/icon-type-2-red.png",
+          "proxy_url": "https://images-ext-1.discordapp.net/external/pGfXckc4pnT_Bd4-sUYzCEvTkvS1PKPl2J9ddy0ufAg/https/tradytics.com/static/assets/images/icon-type-2-red.png",
+          "width": 571,
+          "height": 283,
+          "content_type": "image/png",
+          "placeholder": "3lqDAoAXd3d3d493d29V9WdnZgeIZ2k=",
+          "placeholder_version": 1,
+          "flags": 0
+        },
+        "footer": {
+          "text": "Data by Tradytics"
+        },
+        "content_scan_version": 4
+      }
+    ],
+    "timestamp": "2026-03-13T17:08:45.336000+00:00",
+    "edited_timestamp": null,
+    "flags": 0,
+    "components": [],
+    "id": "1482062877262217428",
+    "channel_id": "1470340659922735209",
+    "author": {
+      "id": "1470341972634894399",
+      "username": "Captain Hook",
+      "avatar": null,
+      "discriminator": "0000",
+      "public_flags": 0,
+      "flags": 0,
+      "bot": true,
+      "global_name": null,
+      "clan": null,
+      "primary_guild": null
+    },
+    "pinned": false,
+    "mention_everyone": false,
+    "tts": false,
+    "webhook_id": "1470341972634894399"
+  },
+  {
+    "type": 0,
+    "content": "",
+    "mentions": [],
+    "mention_roles": [],
+    "attachments": [],
+    "embeds": [
+      {
+        "type": "rich",
+        "description": "Bearish Continuation on 1 Hour",
+        "color": 15745079,
+        "timestamp": "2026-03-12T18:39:01.295000+00:00",
+        "fields": [
+          {
+            "name": "Symbol",
+            "value": "LOW",
+            "inline": true
+          },
+          {
+            "name": "Entry",
+            "value": "241.7",
+            "inline": true
+          },
+          {
+            "name": "Position",
+            "value": "Short",
+            "inline": true
+          },
+          {
+            "name": "Target",
+            "value": "240.81",
+            "inline": true
+          },
+          {
+            "name": "Stoploss",
+            "value": "242.54",
+            "inline": true
+          },
+          {
+            "name": "Potential Profit",
+            "value": "0.84",
+            "inline": true
+          }
+        ],
+        "author": {
+          "name": "Scalp Trade Idea",
+          "url": "https://tradytics.com/",
+          "icon_url": "https://tradytics.com/static/assets/images/icon-type-2-red.png",
+          "proxy_icon_url": "https://images-ext-1.discordapp.net/external/pGfXckc4pnT_Bd4-sUYzCEvTkvS1PKPl2J9ddy0ufAg/https/tradytics.com/static/assets/images/icon-type-2-red.png"
+        },
+        "thumbnail": {
+          "url": "https://tradytics.com/static/assets/images/icon-type-2-red.png",
+          "proxy_url": "https://images-ext-1.discordapp.net/external/pGfXckc4pnT_Bd4-sUYzCEvTkvS1PKPl2J9ddy0ufAg/https/tradytics.com/static/assets/images/icon-type-2-red.png",
+          "width": 571,
+          "height": 283,
+          "content_type": "image/png",
+          "placeholder": "3lqDAoAXd3d3d493d29V9WdnZgeIZ2k=",
+          "placeholder_version": 1,
+          "flags": 0
+        },
+        "footer": {
+          "text": "Data by Tradytics"
+        },
+        "content_scan_version": 4
+      }
+    ],
+    "timestamp": "2026-03-12T18:39:01.439000+00:00",
+    "edited_timestamp": null,
+    "flags": 0,
+    "components": [],
+    "id": "1481723206178967592",
+    "channel_id": "1470340659922735209",
+    "author": {
+      "id": "1470341972634894399",
+      "username": "Captain Hook",
+      "avatar": null,
+      "discriminator": "0000",
+      "public_flags": 0,
+      "flags": 0,
+      "bot": true,
+      "global_name": null,
+      "clan": null,
+      "primary_guild": null
+    },
+    "pinned": false,
+    "mention_everyone": false,
+    "tts": false,
+    "webhook_id": "1470341972634894399"
+  },
+  {
+    "type": 0,
+    "content": "",
+    "mentions": [],
+    "mention_roles": [],
+    "attachments": [],
+    "embeds": [
+      {
+        "type": "rich",
+        "description": "Bearish Reversal on 1 Day",
+        "color": 15745079,
+        "timestamp": "2026-03-11T21:16:33.534000+00:00",
+        "fields": [
+          {
+            "name": "Symbol",
+            "value": "AVGO",
+            "inline": true
+          },
+          {
+            "name": "Entry",
+            "value": "340.7",
+            "inline": true
+          },
+          {
+            "name": "Position",
+            "value": "Short",
+            "inline": true
+          },
+          {
+            "name": "Target",
+            "value": "323.6101",
+            "inline": true
+          },
+          {
+            "name": "Stoploss",
+            "value": "353.14",
+            "inline": true
+          },
+          {
+            "name": "Potential Profit",
+            "value": "17.09",
+            "inline": true
+          }
+        ],
+        "author": {
+          "name": "Scalp Trade Idea",
+          "url": "https://tradytics.com/",
+          "icon_url": "https://tradytics.com/static/assets/images/icon-type-2-red.png",
+          "proxy_icon_url": "https://images-ext-1.discordapp.net/external/pGfXckc4pnT_Bd4-sUYzCEvTkvS1PKPl2J9ddy0ufAg/https/tradytics.com/static/assets/images/icon-type-2-red.png"
+        },
+        "thumbnail": {
+          "url": "https://tradytics.com/static/assets/images/icon-type-2-red.png",
+          "proxy_url": "https://images-ext-1.discordapp.net/external/pGfXckc4pnT_Bd4-sUYzCEvTkvS1PKPl2J9ddy0ufAg/https/tradytics.com/static/assets/images/icon-type-2-red.png",
+          "width": 571,
+          "height": 283,
+          "content_type": "image/png",
+          "placeholder": "3lqDAoAXd3d3d493d29V9WdnZgeIZ2k=",
+          "placeholder_version": 1,
+          "flags": 0
+        },
+        "footer": {
+          "text": "Data by Tradytics"
+        },
+        "content_scan_version": 4
+      }
+    ],
+    "timestamp": "2026-03-11T21:16:33.689000+00:00",
+    "edited_timestamp": null,
+    "flags": 0,
+    "components": [],
+    "id": "1481400463923613746",
+    "channel_id": "1470340659922735209",
+    "author": {
+      "id": "1470341972634894399",
+      "username": "Captain Hook",
+      "avatar": null,
+      "discriminator": "0000",
+      "public_flags": 0,
+      "flags": 0,
+      "bot": true,
+      "global_name": null,
+      "clan": null,
+      "primary_guild": null
+    },
+    "pinned": false,
+    "mention_everyone": false,
+    "tts": false,
+    "webhook_id": "1470341972634894399"
+  },
+  {
+    "type": 0,
+    "content": "",
+    "mentions": [],
+    "mention_roles": [],
+    "attachments": [],
+    "embeds": [
+      {
+        "type": "rich",
+        "description": "Bearish Reversal on 30 Min",
+        "color": 15745079,
+        "timestamp": "2026-03-11T21:04:10.455000+00:00",
+        "fields": [
+          {
+            "name": "Symbol",
+            "value": "AVGO",
+            "inline": true
+          },
+          {
+            "name": "Entry",
+            "value": "340.7",
+            "inline": true
+          },
+          {
+            "name": "Position",
+            "value": "Short",
+            "inline": true
+          },
+          {
+            "name": "Target",
+            "value": "339.945",
+            "inline": true
+          },
+          {
+            "name": "Stoploss",
+            "value": "341.2",
+            "inline": true
+          },
+          {
+            "name": "Potential Profit",
+            "value": "0.75",
+            "inline": true
+          }
+        ],
+        "author": {
+          "name": "Scalp Trade Idea",
+          "url": "https://tradytics.com/",
+          "icon_url": "https://tradytics.com/static/assets/images/icon-type-2-red.png",
+          "proxy_icon_url": "https://images-ext-1.discordapp.net/external/pGfXckc4pnT_Bd4-sUYzCEvTkvS1PKPl2J9ddy0ufAg/https/tradytics.com/static/assets/images/icon-type-2-red.png"
+        },
+        "thumbnail": {
+          "url": "https://tradytics.com/static/assets/images/icon-type-2-red.png",
+          "proxy_url": "https://images-ext-1.discordapp.net/external/pGfXckc4pnT_Bd4-sUYzCEvTkvS1PKPl2J9ddy0ufAg/https/tradytics.com/static/assets/images/icon-type-2-red.png",
+          "width": 571,
+          "height": 283,
+          "content_type": "image/png",
+          "placeholder": "3lqDAoAXd3d3d493d29V9WdnZgeIZ2k=",
+          "placeholder_version": 1,
+          "flags": 0
+        },
+        "footer": {
+          "text": "Data by Tradytics"
+        },
+        "content_scan_version": 4
+      }
+    ],
+    "timestamp": "2026-03-11T21:04:10.654000+00:00",
+    "edited_timestamp": null,
+    "flags": 0,
+    "components": [],
+    "id": "1481397347408678982",
+    "channel_id": "1470340659922735209",
+    "author": {
+      "id": "1470341972634894399",
+      "username": "Captain Hook",
+      "avatar": null,
+      "discriminator": "0000",
+      "public_flags": 0,
+      "flags": 0,
+      "bot": true,
+      "global_name": null,
+      "clan": null,
+      "primary_guild": null
+    },
+    "pinned": false,
+    "mention_everyone": false,
+    "tts": false,
+    "webhook_id": "1470341972634894399"
+  },
+  {
+    "type": 0,
+    "content": "",
+    "mentions": [],
+    "mention_roles": [],
+    "attachments": [],
+    "embeds": [
+      {
+        "type": "rich",
+        "description": "Bearish Reversal on 1 Hour",
+        "color": 15745079,
+        "timestamp": "2026-03-04T18:07:58.460000+00:00",
+        "fields": [
+          {
+            "name": "Symbol",
+            "value": "JPM",
+            "inline": true
+          },
+          {
+            "name": "Entry",
+            "value": "298.0",
+            "inline": true
+          },
+          {
+            "name": "Position",
+            "value": "Short",
+            "inline": true
+          },
+          {
+            "name": "Target",
+            "value": "297.085",
+            "inline": true
+          },
+          {
+            "name": "Stoploss",
+            "value": "299.04",
+            "inline": true
+          },
+          {
+            "name": "Potential Profit",
+            "value": "0.94",
+            "inline": true
+          }
+        ],
+        "author": {
+          "name": "Scalp Trade Idea",
+          "url": "https://tradytics.com/",
+          "icon_url": "https://tradytics.com/static/assets/images/icon-type-2-red.png",
+          "proxy_icon_url": "https://images-ext-1.discordapp.net/external/pGfXckc4pnT_Bd4-sUYzCEvTkvS1PKPl2J9ddy0ufAg/https/tradytics.com/static/assets/images/icon-type-2-red.png"
+        },
+        "thumbnail": {
+          "url": "https://tradytics.com/static/assets/images/icon-type-2-red.png",
+          "proxy_url": "https://images-ext-1.discordapp.net/external/pGfXckc4pnT_Bd4-sUYzCEvTkvS1PKPl2J9ddy0ufAg/https/tradytics.com/static/assets/images/icon-type-2-red.png",
+          "width": 571,
+          "height": 283,
+          "content_type": "image/png",
+          "placeholder": "3lqDAoAXd3d3d493d29V9WdnZgeIZ2k=",
+          "placeholder_version": 1,
+          "flags": 0
+        },
+        "footer": {
+          "text": "Data by Tradytics"
+        },
+        "content_scan_version": 4
+      }
+    ],
+    "timestamp": "2026-03-04T18:07:58.510000+00:00",
+    "edited_timestamp": null,
+    "flags": 0,
+    "components": [],
+    "id": "1478816289563742347",
+    "channel_id": "1470340659922735209",
+    "author": {
+      "id": "1470341972634894399",
+      "username": "Captain Hook",
+      "avatar": null,
+      "discriminator": "0000",
+      "public_flags": 0,
+      "flags": 0,
+      "bot": true,
+      "global_name": null,
+      "clan": null,
+      "primary_guild": null
+    },
+    "pinned": false,
+    "mention_everyone": false,
+    "tts": false,
+    "webhook_id": "1470341972634894399"
+  },
+  {
+    "type": 0,
+    "content": "",
+    "mentions": [],
+    "mention_roles": [],
+    "attachments": [],
+    "embeds": [
+      {
+        "type": "rich",
+        "description": "Bullish Reversal on 1 Day",
+        "color": 3982519,
+        "timestamp": "2026-03-02T17:57:41.272000+00:00",
+        "fields": [
+          {
+            "name": "Symbol",
+            "value": "CAT",
+            "inline": true
+          },
+          {
+            "name": "Entry",
+            "value": "752",
+            "inline": true
+          },
+          {
+            "name": "Position",
+            "value": "Long",
+            "inline": true
+          },
+          {
+            "name": "Target",
+            "value": "770.61",
+            "inline": true
+          },
+          {
+            "name": "Stoploss",
+            "value": "731.04",
+            "inline": true
+          },
+          {
+            "name": "Potential Profit",
+            "value": "18.61",
+            "inline": true
+          }
+        ],
+        "author": {
+          "name": "Scalp Trade Idea",
+          "url": "https://tradytics.com/",
+          "icon_url": "https://tradytics.com/static/assets/images/icon-type-2.png",
+          "proxy_icon_url": "https://images-ext-1.discordapp.net/external/aF9bKo-A7Cvaj5zea45Kmd-Xc40iR5u4LoMkt7egwCI/https/tradytics.com/static/assets/images/icon-type-2.png"
+        },
+        "thumbnail": {
+          "url": "https://tradytics.com/static/assets/images/icon-type-2.png",
+          "proxy_url": "https://images-ext-1.discordapp.net/external/aF9bKo-A7Cvaj5zea45Kmd-Xc40iR5u4LoMkt7egwCI/https/tradytics.com/static/assets/images/icon-type-2.png",
+          "width": 571,
+          "height": 283,
+          "content_type": "image/png",
+          "placeholder": "IdaAAoAXh4eIh3DJun90BWdnZgeIZ2k=",
+          "placeholder_version": 1,
+          "flags": 0
+        },
+        "footer": {
+          "text": "Data by Tradytics"
+        },
+        "content_scan_version": 4
+      }
+    ],
+    "timestamp": "2026-03-02T17:57:41.403000+00:00",
+    "edited_timestamp": null,
+    "flags": 0,
+    "components": [],
+    "id": "1478088925498048585",
+    "channel_id": "1470340659922735209",
+    "author": {
+      "id": "1470341972634894399",
+      "username": "Captain Hook",
+      "avatar": null,
+      "discriminator": "0000",
+      "public_flags": 0,
+      "flags": 0,
+      "bot": true,
+      "global_name": null,
+      "clan": null,
+      "primary_guild": null
+    },
+    "pinned": false,
+    "mention_everyone": false,
+    "tts": false,
+    "webhook_id": "1470341972634894399"
+  },
+  {
+    "type": 0,
+    "content": "",
+    "mentions": [],
+    "mention_roles": [],
+    "attachments": [],
+    "embeds": [
+      {
+        "type": "rich",
+        "description": "Bearish Continuation on 1 Hour",
+        "color": 15745079,
+        "timestamp": "2026-03-02T16:52:34.237000+00:00",
+        "fields": [
+          {
+            "name": "Symbol",
+            "value": "FANG",
+            "inline": true
+          },
+          {
+            "name": "Entry",
+            "value": "175.9",
+            "inline": true
+          },
+          {
+            "name": "Position",
+            "value": "Short",
+            "inline": true
+          },
+          {
+            "name": "Target",
+            "value": "173.59",
+            "inline": true
+          },
+          {
+            "name": "Stoploss",
+            "value": "178.38",
+            "inline": true
+          },
+          {
+            "name": "Potential Profit",
+            "value": "2.31",
+            "inline": true
+          }
+        ],
+        "author": {
+          "name": "Scalp Trade Idea",
+          "url": "https://tradytics.com/",
+          "icon_url": "https://tradytics.com/static/assets/images/icon-type-2-red.png",
+          "proxy_icon_url": "https://images-ext-1.discordapp.net/external/pGfXckc4pnT_Bd4-sUYzCEvTkvS1PKPl2J9ddy0ufAg/https/tradytics.com/static/assets/images/icon-type-2-red.png"
+        },
+        "thumbnail": {
+          "url": "https://tradytics.com/static/assets/images/icon-type-2-red.png",
+          "proxy_url": "https://images-ext-1.discordapp.net/external/pGfXckc4pnT_Bd4-sUYzCEvTkvS1PKPl2J9ddy0ufAg/https/tradytics.com/static/assets/images/icon-type-2-red.png",
+          "width": 571,
+          "height": 283,
+          "content_type": "image/png",
+          "placeholder": "3lqDAoAXd3d3d493d29V9WdnZgeIZ2k=",
+          "placeholder_version": 1,
+          "flags": 0
+        },
+        "footer": {
+          "text": "Data by Tradytics"
+        },
+        "content_scan_version": 4
+      }
+    ],
+    "timestamp": "2026-03-02T16:52:34.380000+00:00",
+    "edited_timestamp": null,
+    "flags": 0,
+    "components": [],
+    "id": "1478072538255855769",
+    "channel_id": "1470340659922735209",
+    "author": {
+      "id": "1470341972634894399",
+      "username": "Captain Hook",
+      "avatar": null,
+      "discriminator": "0000",
+      "public_flags": 0,
+      "flags": 0,
+      "bot": true,
+      "global_name": null,
+      "clan": null,
+      "primary_guild": null
+    },
+    "pinned": false,
+    "mention_everyone": false,
+    "tts": false,
+    "webhook_id": "1470341972634894399"
+  },
+  {
+    "type": 0,
+    "content": "",
+    "mentions": [],
+    "mention_roles": [],
+    "attachments": [],
+    "embeds": [
+      {
+        "type": "rich",
+        "description": "Bearish Continuation on 1 Hour",
+        "color": 15745079,
+        "timestamp": "2026-02-27T19:38:08.550000+00:00",
+        "fields": [
+          {
+            "name": "Symbol",
+            "value": "DIA",
+            "inline": true
+          },
+          {
+            "name": "Entry",
+            "value": "487.9",
+            "inline": true
+          },
+          {
+            "name": "Position",
+            "value": "Short",
+            "inline": true
+          },
+          {
+            "name": "Target",
+            "value": "487.1",
+            "inline": true
+          },
+          {
+            "name": "Stoploss",
+            "value": "488.92",
+            "inline": true
+          },
+          {
+            "name": "Potential Profit",
+            "value": "0.85",
+            "inline": true
+          }
+        ],
+        "author": {
+          "name": "Scalp Trade Idea",
+          "url": "https://tradytics.com/",
+          "icon_url": "https://tradytics.com/static/assets/images/icon-type-2-red.png",
+          "proxy_icon_url": "https://images-ext-1.discordapp.net/external/pGfXckc4pnT_Bd4-sUYzCEvTkvS1PKPl2J9ddy0ufAg/https/tradytics.com/static/assets/images/icon-type-2-red.png"
+        },
+        "thumbnail": {
+          "url": "https://tradytics.com/static/assets/images/icon-type-2-red.png",
+          "proxy_url": "https://images-ext-1.discordapp.net/external/pGfXckc4pnT_Bd4-sUYzCEvTkvS1PKPl2J9ddy0ufAg/https/tradytics.com/static/assets/images/icon-type-2-red.png",
+          "width": 571,
+          "height": 283,
+          "content_type": "image/png",
+          "placeholder": "3lqDAoAXd3d3d493d29V9WdnZgeIZ2k=",
+          "placeholder_version": 1,
+          "flags": 0
+        },
+        "footer": {
+          "text": "Data by Tradytics"
+        },
+        "content_scan_version": 4
+      }
+    ],
+    "timestamp": "2026-02-27T19:38:08.694000+00:00",
+    "edited_timestamp": null,
+    "flags": 0,
+    "components": [],
+    "id": "1477027042192130262",
+    "channel_id": "1470340659922735209",
+    "author": {
+      "id": "1470341972634894399",
+      "username": "Captain Hook",
+      "avatar": null,
+      "discriminator": "0000",
+      "public_flags": 0,
+      "flags": 0,
+      "bot": true,
+      "global_name": null,
+      "clan": null,
+      "primary_guild": null
+    },
+    "pinned": false,
+    "mention_everyone": false,
+    "tts": false,
+    "webhook_id": "1470341972634894399"
+  },
+  {
+    "type": 0,
+    "content": "",
+    "mentions": [],
+    "mention_roles": [],
+    "attachments": [],
+    "embeds": [
+      {
+        "type": "rich",
+        "description": "Bullish Continuation on 1 Hour",
+        "color": 3982519,
+        "timestamp": "2026-02-24T18:08:07.774000+00:00",
+        "fields": [
+          {
+            "name": "Symbol",
+            "value": "MAR",
+            "inline": true
+          },
+          {
+            "name": "Entry",
+            "value": "346.2",
+            "inline": true
+          },
+          {
+            "name": "Position",
+            "value": "Long",
+            "inline": true
+          },
+          {
+            "name": "Target",
+            "value": "347.71",
+            "inline": true
+          },
+          {
+            "name": "Stoploss",
+            "value": "343.91",
+            "inline": true
+          },
+          {
+            "name": "Potential Profit",
+            "value": "1.54",
+            "inline": true
+          }
+        ],
+        "author": {
+          "name": "Scalp Trade Idea",
+          "url": "https://tradytics.com/",
+          "icon_url": "https://tradytics.com/static/assets/images/icon-type-2.png",
+          "proxy_icon_url": "https://images-ext-1.discordapp.net/external/aF9bKo-A7Cvaj5zea45Kmd-Xc40iR5u4LoMkt7egwCI/https/tradytics.com/static/assets/images/icon-type-2.png"
+        },
+        "thumbnail": {
+          "url": "https://tradytics.com/static/assets/images/icon-type-2.png",
+          "proxy_url": "https://images-ext-1.discordapp.net/external/aF9bKo-A7Cvaj5zea45Kmd-Xc40iR5u4LoMkt7egwCI/https/tradytics.com/static/assets/images/icon-type-2.png",
+          "width": 571,
+          "height": 283,
+          "content_type": "image/png",
+          "placeholder": "IdaAAoAXh4eIh3DJun90BWdnZgeIZ2k=",
+          "placeholder_version": 1,
+          "flags": 0
+        },
+        "footer": {
+          "text": "Data by Tradytics"
+        },
+        "content_scan_version": 4
+      }
+    ],
+    "timestamp": "2026-02-24T18:08:07.889000+00:00",
+    "edited_timestamp": null,
+    "flags": 0,
+    "components": [],
+    "id": "1475917225977450501",
+    "channel_id": "1470340659922735209",
+    "author": {
+      "id": "1470341972634894399",
+      "username": "Captain Hook",
+      "avatar": null,
+      "discriminator": "0000",
+      "public_flags": 0,
+      "flags": 0,
+      "bot": true,
+      "global_name": null,
+      "clan": null,
+      "primary_guild": null
+    },
+    "pinned": false,
+    "mention_everyone": false,
+    "tts": false,
+    "webhook_id": "1470341972634894399"
+  },
+  {
+    "type": 0,
+    "content": "",
+    "mentions": [],
+    "mention_roles": [],
+    "attachments": [],
+    "embeds": [
+      {
+        "type": "rich",
+        "description": "Bearish Reversal on 1 Hour",
+        "color": 15745079,
+        "timestamp": "2026-02-23T18:08:13.045000+00:00",
+        "fields": [
+          {
+            "name": "Symbol",
+            "value": "GE",
+            "inline": true
+          },
+          {
+            "name": "Entry",
+            "value": "338",
+            "inline": true
+          },
+          {
+            "name": "Position",
+            "value": "Short",
+            "inline": true
+          },
+          {
+            "name": "Target",
+            "value": "337",
+            "inline": true
+          },
+          {
+            "name": "Stoploss",
+            "value": "340.13",
+            "inline": true
+          },
+          {
+            "name": "Potential Profit",
+            "value": "1",
+            "inline": true
+          }
+        ],
+        "author": {
+          "name": "Scalp Trade Idea",
+          "url": "https://tradytics.com/",
+          "icon_url": "https://tradytics.com/static/assets/images/icon-type-2-red.png",
+          "proxy_icon_url": "https://images-ext-1.discordapp.net/external/pGfXckc4pnT_Bd4-sUYzCEvTkvS1PKPl2J9ddy0ufAg/https/tradytics.com/static/assets/images/icon-type-2-red.png"
+        },
+        "thumbnail": {
+          "url": "https://tradytics.com/static/assets/images/icon-type-2-red.png",
+          "proxy_url": "https://images-ext-1.discordapp.net/external/pGfXckc4pnT_Bd4-sUYzCEvTkvS1PKPl2J9ddy0ufAg/https/tradytics.com/static/assets/images/icon-type-2-red.png",
+          "width": 571,
+          "height": 283,
+          "content_type": "image/png",
+          "placeholder": "3lqDAoAXd3d3d493d29V9WdnZgeIZ2k=",
+          "placeholder_version": 1,
+          "flags": 0
+        },
+        "footer": {
+          "text": "Data by Tradytics"
+        },
+        "content_scan_version": 4
+      }
+    ],
+    "timestamp": "2026-02-23T18:08:13.273000+00:00",
+    "edited_timestamp": null,
+    "flags": 0,
+    "components": [],
+    "id": "1475554860693983461",
+    "channel_id": "1470340659922735209",
+    "author": {
+      "id": "1470341972634894399",
+      "username": "Captain Hook",
+      "avatar": null,
+      "discriminator": "0000",
+      "public_flags": 0,
+      "flags": 0,
+      "bot": true,
+      "global_name": null,
+      "clan": null,
+      "primary_guild": null
+    },
+    "pinned": false,
+    "mention_everyone": false,
+    "tts": false,
+    "webhook_id": "1470341972634894399"
+  },
+  {
+    "type": 0,
+    "content": "",
+    "mentions": [],
+    "mention_roles": [],
+    "attachments": [],
+    "embeds": [
+      {
+        "type": "rich",
+        "description": "Bearish Continuation on 30 Min",
+        "color": 15745079,
+        "timestamp": "2026-02-23T16:32:30.809000+00:00",
+        "fields": [
+          {
+            "name": "Symbol",
+            "value": "DE",
+            "inline": true
+          },
+          {
+            "name": "Entry",
+            "value": "654.0",
+            "inline": true
+          },
+          {
+            "name": "Position",
+            "value": "Short",
+            "inline": true
+          },
+          {
+            "name": "Target",
+            "value": "651.44",
+            "inline": true
+          },
+          {
+            "name": "Stoploss",
+            "value": "657.17",
+            "inline": true
+          },
+          {
+            "name": "Potential Profit",
+            "value": "2.58",
+            "inline": true
+          }
+        ],
+        "author": {
+          "name": "Scalp Trade Idea",
+          "url": "https://tradytics.com/",
+          "icon_url": "https://tradytics.com/static/assets/images/icon-type-2-red.png",
+          "proxy_icon_url": "https://images-ext-1.discordapp.net/external/pGfXckc4pnT_Bd4-sUYzCEvTkvS1PKPl2J9ddy0ufAg/https/tradytics.com/static/assets/images/icon-type-2-red.png"
+        },
+        "thumbnail": {
+          "url": "https://tradytics.com/static/assets/images/icon-type-2-red.png",
+          "proxy_url": "https://images-ext-1.discordapp.net/external/pGfXckc4pnT_Bd4-sUYzCEvTkvS1PKPl2J9ddy0ufAg/https/tradytics.com/static/assets/images/icon-type-2-red.png",
+          "width": 571,
+          "height": 283,
+          "content_type": "image/png",
+          "placeholder": "3lqDAoAXd3d3d493d29V9WdnZgeIZ2k=",
+          "placeholder_version": 1,
+          "flags": 0
+        },
+        "footer": {
+          "text": "Data by Tradytics"
+        },
+        "content_scan_version": 4
+      }
+    ],
+    "timestamp": "2026-02-23T16:32:31.010000+00:00",
+    "edited_timestamp": null,
+    "flags": 0,
+    "components": [],
+    "id": "1475530775897047123",
+    "channel_id": "1470340659922735209",
+    "author": {
+      "id": "1470341972634894399",
+      "username": "Captain Hook",
+      "avatar": null,
+      "discriminator": "0000",
+      "public_flags": 0,
+      "flags": 0,
+      "bot": true,
+      "global_name": null,
+      "clan": null,
+      "primary_guild": null
+    },
+    "pinned": false,
+    "mention_everyone": false,
+    "tts": false,
+    "webhook_id": "1470341972634894399"
+  },
+  {
+    "type": 0,
+    "content": "",
+    "mentions": [],
+    "mention_roles": [],
+    "attachments": [],
+    "embeds": [
+      {
+        "type": "rich",
+        "description": "Bullish Continuation on 1 Hour",
+        "color": 3982519,
+        "timestamp": "2026-02-19T17:52:41.048000+00:00",
+        "fields": [
+          {
+            "name": "Symbol",
+            "value": "RTX",
+            "inline": true
+          },
+          {
+            "name": "Entry",
+            "value": "205.5",
+            "inline": true
+          },
+          {
+            "name": "Position",
+            "value": "Long",
+            "inline": true
+          },
+          {
+            "name": "Target",
+            "value": "206.55",
+            "inline": true
+          },
+          {
+            "name": "Stoploss",
+            "value": "204.24",
+            "inline": true
+          },
+          {
+            "name": "Potential Profit",
+            "value": "1.02",
+            "inline": true
+          }
+        ],
+        "author": {
+          "name": "Scalp Trade Idea",
+          "url": "https://tradytics.com/",
+          "icon_url": "https://tradytics.com/static/assets/images/icon-type-2.png",
+          "proxy_icon_url": "https://images-ext-1.discordapp.net/external/aF9bKo-A7Cvaj5zea45Kmd-Xc40iR5u4LoMkt7egwCI/https/tradytics.com/static/assets/images/icon-type-2.png"
+        },
+        "thumbnail": {
+          "url": "https://tradytics.com/static/assets/images/icon-type-2.png",
+          "proxy_url": "https://images-ext-1.discordapp.net/external/aF9bKo-A7Cvaj5zea45Kmd-Xc40iR5u4LoMkt7egwCI/https/tradytics.com/static/assets/images/icon-type-2.png",
+          "width": 571,
+          "height": 283,
+          "content_type": "image/png",
+          "placeholder": "IdaAAoAXh4eIh3DJun90BWdnZgeIZ2k=",
+          "placeholder_version": 1,
+          "flags": 0
+        },
+        "footer": {
+          "text": "Data by Tradytics"
+        },
+        "content_scan_version": 4
+      }
+    ],
+    "timestamp": "2026-02-19T17:52:41.180000+00:00",
+    "edited_timestamp": null,
+    "flags": 0,
+    "components": [],
+    "id": "1474101399750185144",
+    "channel_id": "1470340659922735209",
+    "author": {
+      "id": "1470341972634894399",
+      "username": "Captain Hook",
+      "avatar": null,
+      "discriminator": "0000",
+      "public_flags": 0,
+      "flags": 0,
+      "bot": true,
+      "global_name": null,
+      "clan": null,
+      "primary_guild": null
+    },
+    "pinned": false,
+    "mention_everyone": false,
+    "tts": false,
+    "webhook_id": "1470341972634894399"
+  },
+  {
+    "type": 0,
+    "content": "",
+    "mentions": [],
+    "mention_roles": [],
+    "attachments": [],
+    "embeds": [
+      {
+        "type": "rich",
+        "description": "Bullish Continuation on 30 Min",
+        "color": 3982519,
+        "timestamp": "2026-02-18T22:33:01.209000+00:00",
+        "fields": [
+          {
+            "name": "Symbol",
+            "value": "EBAY",
+            "inline": true
+          },
+          {
+            "name": "Entry",
+            "value": "89",
+            "inline": true
+          },
+          {
+            "name": "Position",
+            "value": "Long",
+            "inline": true
+          },
+          {
+            "name": "Target",
+            "value": "91",
+            "inline": true
+          },
+          {
+            "name": "Stoploss",
+            "value": "87.05",
+            "inline": true
+          },
+          {
+            "name": "Potential Profit",
+            "value": "2",
+            "inline": true
+          }
+        ],
+        "author": {
+          "name": "Scalp Trade Idea",
+          "url": "https://tradytics.com/",
+          "icon_url": "https://tradytics.com/static/assets/images/icon-type-2.png",
+          "proxy_icon_url": "https://images-ext-1.discordapp.net/external/aF9bKo-A7Cvaj5zea45Kmd-Xc40iR5u4LoMkt7egwCI/https/tradytics.com/static/assets/images/icon-type-2.png"
+        },
+        "thumbnail": {
+          "url": "https://tradytics.com/static/assets/images/icon-type-2.png",
+          "proxy_url": "https://images-ext-1.discordapp.net/external/aF9bKo-A7Cvaj5zea45Kmd-Xc40iR5u4LoMkt7egwCI/https/tradytics.com/static/assets/images/icon-type-2.png",
+          "width": 571,
+          "height": 283,
+          "content_type": "image/png",
+          "placeholder": "IdaAAoAXh4eIh3DJun90BWdnZgeIZ2k=",
+          "placeholder_version": 1,
+          "flags": 0
+        },
+        "footer": {
+          "text": "Data by Tradytics"
+        },
+        "content_scan_version": 4
+      }
+    ],
+    "timestamp": "2026-02-18T22:33:01.350000+00:00",
+    "edited_timestamp": null,
+    "flags": 0,
+    "components": [],
+    "id": "1473809560790630566",
+    "channel_id": "1470340659922735209",
+    "author": {
+      "id": "1470341972634894399",
+      "username": "Captain Hook",
+      "avatar": null,
+      "discriminator": "0000",
+      "public_flags": 0,
+      "flags": 0,
+      "bot": true,
+      "global_name": null,
+      "clan": null,
+      "primary_guild": null
+    },
+    "pinned": false,
+    "mention_everyone": false,
+    "tts": false,
+    "webhook_id": "1470341972634894399"
+  },
+  {
+    "type": 0,
+    "content": "(Should be ready very soon! Changes may be made within the next few days, still testing)",
+    "mentions": [],
+    "mention_roles": [],
+    "attachments": [],
+    "embeds": [],
+    "timestamp": "2026-02-09T08:57:35.147000+00:00",
+    "edited_timestamp": null,
+    "flags": 0,
+    "components": [],
+    "id": "1470342858631286957",
+    "channel_id": "1470340659922735209",
+    "author": {
+      "id": "722863271186661377",
+      "username": "andy_invests",
+      "avatar": "dc2ec46b1ec2c97bb4d8c8dc3bf6015f",
+      "discriminator": "0",
+      "public_flags": 0,
+      "flags": 0,
+      "banner": null,
+      "accent_color": null,
+      "global_name": "-Andy Invests-",
+      "avatar_decoration_data": null,
+      "collectibles": null,
+      "display_name_styles": {
+        "font_id": 12,
+        "effect_id": 5,
+        "colors": [
+          13018645
+        ]
+      },
+      "banner_color": null,
+      "clan": {
+        "identity_guild_id": "965535955480109096",
+        "identity_enabled": true,
+        "tag": "Bull",
+        "badge": "a3290d71cdc373a5f63598746c8f1476"
+      },
+      "primary_guild": {
+        "identity_guild_id": "965535955480109096",
+        "identity_enabled": true,
+        "tag": "Bull",
+        "badge": "a3290d71cdc373a5f63598746c8f1476"
+      }
+    },
+    "pinned": false,
+    "mention_everyone": false,
+    "tts": false
+  }
+]

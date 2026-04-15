@@ -1,0 +1,82 @@
+[
+  {
+    "time": "13:36 UTC",
+    "call_put": "Calls",
+    "strike": 605,
+    "qqq_price": 599.91,
+    "vs_strike": -5.09,
+    "vs_vwap": -0.15,
+    "trend_5m": "DOWN (-0.26% from open)",
+    "win": true
+  },
+  {
+    "time": "13:32 UTC",
+    "call_put": "Calls",
+    "strike": 592,
+    "qqq_price": 589.83,
+    "vs_strike": -2.17,
+    "vs_vwap": -0.64,
+    "trend_5m": "UP (+0.05% from open)",
+    "win": true
+  },
+  {
+    "time": "13:37 UTC",
+    "call_put": "Puts",
+    "strike": 587,
+    "qqq_price": 589.69,
+    "vs_strike": 2.69,
+    "vs_vwap": -0.79,
+    "trend_5m": "DOWN (-0.13% from open)",
+    "win": true
+  },
+  {
+    "time": "13:33 UTC",
+    "call_put": "Calls",
+    "strike": 584,
+    "qqq_price": 578.17,
+    "vs_strike": -5.83,
+    "vs_vwap": -3.18,
+    "trend_5m": "DOWN (-0.76% from open)",
+    "win": false
+  },
+  {
+    "time": "13:31 UTC",
+    "call_put": "Calls",
+    "strike": 574,
+    "qqq_price": 564.4,
+    "vs_strike": -9.6,
+    "vs_vwap": -3.42,
+    "trend_5m": "DOWN (-1.12% from open)",
+    "win": true
+  },
+  {
+    "time": "13:35 UTC",
+    "call_put": "Puts",
+    "strike": 562,
+    "qqq_price": 574.99,
+    "vs_strike": 12.99,
+    "vs_vwap": 5.76,
+    "trend_5m": "UP (+1.90% from open)",
+    "win": true
+  },
+  {
+    "time": "13:35 UTC",
+    "call_put": "Puts",
+    "strike": 580,
+    "qqq_price": 586.81,
+    "vs_strike": 6.81,
+    "vs_vwap": 2.32,
+    "trend_5m": "UP (+0.92% from open)",
+    "win": null
+  },
+  {
+    "time": "13:35 UTC",
+    "call_put": "Puts",
+    "strike": 605,
+    "qqq_price": 606.2,
+    "vs_strike": 1.2,
+    "vs_vwap": 0.01,
+    "trend_5m": "DOWN (-0.41% from open)",
+    "win": null
+  }
+]

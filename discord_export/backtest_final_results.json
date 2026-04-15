@@ -1,0 +1,438 @@
+[
+  {
+    "call_put": "Puts",
+    "strike": 619,
+    "entry_price": 1.1,
+    "num_tps": 4,
+    "tps": [
+      1.2,
+      1.3,
+      1.4,
+      1.5
+    ],
+    "dollar_pnl": 44.06,
+    "pnl_pct": 13.4,
+    "win": true,
+    "entry_time": "2025-12-10 14:32:04.225000+00:00"
+  },
+  {
+    "call_put": "Calls",
+    "strike": 612,
+    "entry_price": 1.15,
+    "num_tps": 4,
+    "tps": [
+      1.25,
+      1.35,
+      1.5,
+      1.65
+    ],
+    "dollar_pnl": 49.34,
+    "pnl_pct": 14.3,
+    "win": true,
+    "entry_time": "2025-12-16 14:34:06.300000+00:00"
+  },
+  {
+    "call_put": "Calls",
+    "strike": 615,
+    "entry_price": 1.05,
+    "num_tps": 1,
+    "tps": [
+      1.25
+    ],
+    "dollar_pnl": 15.0,
+    "pnl_pct": 4.8,
+    "win": true,
+    "entry_time": "2025-12-17 14:30:31.429000+00:00"
+  },
+  {
+    "call_put": "Calls",
+    "strike": 615,
+    "entry_price": 0.515,
+    "num_tps": 2,
+    "tps": [
+      0.545,
+      0.59
+    ],
+    "dollar_pnl": 6.47,
+    "pnl_pct": 4.2,
+    "win": true,
+    "entry_time": "2025-12-17 14:42:01.980000+00:00"
+  },
+  {
+    "call_put": "Calls",
+    "strike": 622,
+    "entry_price": 1.02,
+    "num_tps": 1,
+    "tps": [
+      1.25
+    ],
+    "dollar_pnl": 17.25,
+    "pnl_pct": 5.6,
+    "win": true,
+    "entry_time": "2025-12-22 14:30:58.213000+00:00"
+  },
+  {
+    "call_put": "Calls",
+    "strike": 621,
+    "entry_price": 1.02,
+    "num_tps": 7,
+    "tps": [
+      1.1,
+      1.25,
+      1.45,
+      1.55,
+      1.75,
+      2.0,
+      2.35
+    ],
+    "dollar_pnl": 106.37,
+    "pnl_pct": 34.8,
+    "win": true,
+    "entry_time": "2025-12-29 14:32:17.680000+00:00"
+  },
+  {
+    "call_put": "Calls",
+    "strike": 621,
+    "entry_price": 1.07,
+    "num_tps": 1,
+    "tps": [
+      1.17
+    ],
+    "dollar_pnl": 7.5,
+    "pnl_pct": 2.3,
+    "win": true,
+    "entry_time": "2025-12-30 14:33:19.339000+00:00"
+  },
+  {
+    "call_put": "Calls",
+    "strike": 621,
+    "entry_price": 0.72,
+    "num_tps": 0,
+    "tps": [],
+    "dollar_pnl": -216.0,
+    "pnl_pct": -100.0,
+    "win": false,
+    "entry_time": "2025-12-31 14:31:12.784000+00:00"
+  },
+  {
+    "call_put": "Calls",
+    "strike": 624,
+    "entry_price": 1.05,
+    "num_tps": 3,
+    "tps": [
+      1.25,
+      1.4,
+      1.75
+    ],
+    "dollar_pnl": 64.22,
+    "pnl_pct": 20.4,
+    "win": true,
+    "entry_time": "2026-01-07 14:34:06.128000+00:00"
+  },
+  {
+    "call_put": "Puts",
+    "strike": 621,
+    "entry_price": 1.01,
+    "num_tps": 7,
+    "tps": [
+      1.2,
+      1.35,
+      1.65,
+      1.9,
+      2.55,
+      2.7,
+      3.02
+    ],
+    "dollar_pnl": 181.99,
+    "pnl_pct": 60.1,
+    "win": true,
+    "entry_time": "2026-01-08 14:30:47.735000+00:00"
+  },
+  {
+    "call_put": "Puts",
+    "strike": 626,
+    "entry_price": 1.1,
+    "num_tps": 0,
+    "tps": [],
+    "dollar_pnl": -330.0,
+    "pnl_pct": -100.0,
+    "win": false,
+    "entry_time": "2026-01-13 14:32:40.243000+00:00"
+  },
+  {
+    "call_put": "Calls",
+    "strike": 627,
+    "entry_price": 1.1,
+    "num_tps": 2,
+    "tps": [
+      1.25,
+      1.4
+    ],
+    "dollar_pnl": 28.12,
+    "pnl_pct": 8.5,
+    "win": true,
+    "entry_time": "2026-01-15 14:33:59.068000+00:00"
+  },
+  {
+    "call_put": "Puts",
+    "strike": 612,
+    "entry_price": 1.1,
+    "num_tps": 6,
+    "tps": [
+      1.2,
+      1.35,
+      1.55,
+      1.75,
+      2.05,
+      2.25
+    ],
+    "dollar_pnl": 104.12,
+    "pnl_pct": 31.6,
+    "win": true,
+    "entry_time": "2026-02-12 14:31:32.635000+00:00"
+  },
+  {
+    "call_put": "Puts",
+    "strike": 597,
+    "entry_price": 1.25,
+    "num_tps": 1,
+    "tps": [
+      1.4
+    ],
+    "dollar_pnl": 11.25,
+    "pnl_pct": 3.0,
+    "win": true,
+    "entry_time": "2026-02-18 14:36:03.112000+00:00"
+  },
+  {
+    "call_put": "Calls",
+    "strike": 605,
+    "entry_price": 1.3,
+    "num_tps": 3,
+    "tps": [
+      1.45,
+      1.6,
+      1.3
+    ],
+    "dollar_pnl": 28.12,
+    "pnl_pct": 7.2,
+    "win": true,
+    "entry_time": "2026-02-19 14:40:16.515000+00:00"
+  },
+  {
+    "call_put": "Calls",
+    "strike": 607,
+    "entry_price": 1.2,
+    "num_tps": 2,
+    "tps": [
+      1.35,
+      1.5
+    ],
+    "dollar_pnl": 28.13,
+    "pnl_pct": 7.8,
+    "win": true,
+    "entry_time": "2026-02-23 14:44:20.876000+00:00"
+  },
+  {
+    "call_put": "Puts",
+    "strike": 609,
+    "entry_price": 1.2,
+    "num_tps": 0,
+    "tps": [],
+    "dollar_pnl": -360.0,
+    "pnl_pct": -100.0,
+    "win": false,
+    "entry_time": "2026-02-25 14:31:00.251000+00:00"
+  },
+  {
+    "call_put": "Calls",
+    "strike": 615,
+    "entry_price": 1.1,
+    "num_tps": 1,
+    "tps": [
+      1.25
+    ],
+    "dollar_pnl": 11.25,
+    "pnl_pct": 3.4,
+    "win": true,
+    "entry_time": "2026-02-26 14:53:59.395000+00:00"
+  },
+  {
+    "call_put": "Puts",
+    "strike": 599,
+    "entry_price": 1.25,
+    "num_tps": 1,
+    "tps": [
+      1.4
+    ],
+    "dollar_pnl": 11.25,
+    "pnl_pct": 3.0,
+    "win": true,
+    "entry_time": "2026-03-02 14:38:55.044000+00:00"
+  },
+  {
+    "call_put": "Calls",
+    "strike": 601,
+    "entry_price": 1.3,
+    "num_tps": 2,
+    "tps": [
+      1.75,
+      1.9
+    ],
+    "dollar_pnl": 67.5,
+    "pnl_pct": 17.3,
+    "win": true,
+    "entry_time": "2026-03-03 14:30:29.256000+00:00"
+  },
+  {
+    "call_put": "Calls",
+    "strike": 604,
+    "entry_price": 1.4,
+    "num_tps": 3,
+    "tps": [
+      1.55,
+      1.75,
+      1.9
+    ],
+    "dollar_pnl": 52.03,
+    "pnl_pct": 12.4,
+    "win": true,
+    "entry_time": "2026-03-06 14:48:05.040000+00:00"
+  },
+  {
+    "call_put": "Calls",
+    "strike": 597,
+    "entry_price": 1.2,
+    "num_tps": 2,
+    "tps": [
+      1.35,
+      1.55
+    ],
+    "dollar_pnl": 30.94,
+    "pnl_pct": 8.6,
+    "win": true,
+    "entry_time": "2026-03-09 13:42:38.075000+00:00"
+  },
+  {
+    "call_put": "Calls",
+    "strike": 604,
+    "entry_price": 1.3,
+    "num_tps": 1,
+    "tps": [
+      1.55
+    ],
+    "dollar_pnl": 18.75,
+    "pnl_pct": 4.8,
+    "win": true,
+    "entry_time": "2026-03-12 13:46:29.604000+00:00"
+  },
+  {
+    "call_put": "Calls",
+    "strike": 605,
+    "entry_price": 1.15,
+    "num_tps": 1,
+    "tps": [
+      1.3
+    ],
+    "dollar_pnl": 11.25,
+    "pnl_pct": 3.3,
+    "win": true,
+    "entry_time": "2026-03-18 13:36:06.420000+00:00"
+  },
+  {
+    "call_put": "Calls",
+    "strike": 592,
+    "entry_price": 1.2,
+    "num_tps": 1,
+    "tps": [
+      1.35
+    ],
+    "dollar_pnl": 11.25,
+    "pnl_pct": 3.1,
+    "win": true,
+    "entry_time": "2026-03-19 13:32:46.381000+00:00"
+  },
+  {
+    "call_put": "Puts",
+    "strike": 587,
+    "entry_price": 1.2,
+    "num_tps": 1,
+    "tps": [
+      1.35
+    ],
+    "dollar_pnl": 11.25,
+    "pnl_pct": 3.1,
+    "win": true,
+    "entry_time": "2026-03-23 13:37:12.931000+00:00"
+  },
+  {
+    "call_put": "Calls",
+    "strike": 584,
+    "entry_price": 1.15,
+    "num_tps": 4,
+    "tps": [
+      1.3,
+      1.4,
+      1.55,
+      1.9
+    ],
+    "dollar_pnl": 65.92,
+    "pnl_pct": 19.1,
+    "win": true,
+    "entry_time": "2026-03-26 13:33:48.524000+00:00"
+  },
+  {
+    "call_put": "Calls",
+    "strike": 574,
+    "entry_price": 1.1,
+    "num_tps": 0,
+    "tps": [],
+    "dollar_pnl": -330.0,
+    "pnl_pct": -100.0,
+    "win": false,
+    "entry_time": "2026-03-27 13:31:16.884000+00:00"
+  },
+  {
+    "call_put": "Puts",
+    "strike": 562,
+    "entry_price": 1.1,
+    "num_tps": 1,
+    "tps": [
+      1.3
+    ],
+    "dollar_pnl": 15.0,
+    "pnl_pct": 4.5,
+    "win": true,
+    "entry_time": "2026-03-31 13:35:42.721000+00:00"
+  },
+  {
+    "call_put": "Puts",
+    "strike": 580,
+    "entry_price": 1.15,
+    "num_tps": 4,
+    "tps": [
+      1.45,
+      1.55,
+      1.65,
+      1.85
+    ],
+    "dollar_pnl": 88.24,
+    "pnl_pct": 25.6,
+    "win": true,
+    "entry_time": "2026-04-01 13:35:14.459000+00:00"
+  },
+  {
+    "call_put": "Puts",
+    "strike": 605,
+    "entry_price": 1.25,
+    "num_tps": 2,
+    "tps": [
+      1.55,
+      1.65
+    ],
+    "dollar_pnl": 45.0,
+    "pnl_pct": 12.0,
+    "win": true,
+    "entry_time": "2026-04-08 13:35:31.253000+00:00"
+  }
+]
