@@ -12,7 +12,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 log = logging.getLogger(__name__)
 
-from discord_watcher import parse_signal
+from discord_watcher import parse_embed_signal, parse_message_signal, parse_signal
 
 # ── Mock executor ─────────────────────────────────────────────────────────────
 
@@ -28,6 +28,19 @@ class MockExecutor:
         self.calls.append(('close_position', {'ticker': ticker, 'strike': strike, 'direction': direction, 'price': price}))
         order_type = f"LIMIT @ {price}" if price else "MARKET"
         log.info(f"  [MOCK] close_position: {ticker} {strike} {direction} {order_type}")
+
+
+class FakeField:
+    def __init__(self, name, value):
+        self.name = name
+        self.value = value
+
+
+class FakeEmbed:
+    def __init__(self, title='', description='', fields=None):
+        self.title = title
+        self.description = description
+        self.fields = [FakeField(name, value) for name, value in (fields or [])]
 
 
 # ── Signal parser tests ────────────────────────────────────────────────────────
@@ -56,6 +69,146 @@ def test_parse_signal():
             all_pass = False
 
     return all_pass
+
+
+def test_parse_embed_signal():
+    print("\n" + "="*60)
+    print("TEST 2: parse_embed_signal()")
+    print("="*60)
+
+    tests = [
+        (
+            FakeEmbed(
+                title="LIVE ENTRY — MegaGrid Low DD Champion",
+                description="@admin\nPUT position opened on SPY $373.0 strike",
+                fields=[
+                    ("Strike", "$373.0"),
+                    ("Type", "PUT"),
+                    ("Entry Price", "$1.80"),
+                    ("Quantity", "1 contract"),
+                    ("Take Profit", "+100% ($3.60)"),
+                    ("Stop Loss", "-20% ($1.44)"),
+                    ("Model ID", "MG_LowDD"),
+                    ("Source", "0DTE_V3_MegaGrid"),
+                ],
+            ),
+            {'type': 'ENTRY', 'ticker': 'SPY', 'strike': 373.0, 'direction': 'PUTS', 'price': 1.80, 'qty': 1, 'model_id': 'MG_LowDD', 'source_name': '0DTE_V3_MegaGrid', 'source': 'LIVE_ENTRY_EMBED'},
+        ),
+        (
+            FakeEmbed(
+                title="LIVE EXIT — MegaGrid Risk-Adjusted",
+                description="@admin\nTIMED OUT after 60 min — gained 72.7% ($+133.00)",
+                fields=[
+                    ("Exit Reason", "Max Hold Time Reached"),
+                    ("Strike", "$373.0 PUT"),
+                    ("Entry Price", "$1.83"),
+                    ("Exit Price", "$3.16"),
+                    ("Qty", "1 contract"),
+                    ("SPY at Exit", "$734.27"),
+                    ("Model ID", "MG_RiskAdj"),
+                    ("Source", "0DTE_V3_MegaGrid"),
+                ],
+            ),
+            {'type': 'EXIT', 'ticker': 'SPY', 'strike': 373.0, 'direction': 'PUTS', 'price': 3.16, 'qty': 1, 'model_id': 'MG_RiskAdj', 'source_name': '0DTE_V3_MegaGrid', 'source': 'LIVE_EXIT_EMBED'},
+        ),
+        (
+            FakeEmbed(
+                title="LIVE ENTRY — Most Stable MultiConf",
+                description="@admin\nCALL position opened on SPY $740.0 strike",
+                fields=[
+                    ("Strike", "$740.0"),
+                    ("Type", "CALL"),
+                    ("Entry Price", "$0.78"),
+                    ("Quantity", "3 contracts"),
+                    ("Model ID", "MSP_TripleEMA"),
+                    ("Source", "0DTE_Most_Stable_Profitable"),
+                ],
+            ),
+            {'type': 'ENTRY', 'ticker': 'SPY', 'strike': 740.0, 'direction': 'CALLS', 'price': 0.78, 'qty': 3, 'model_id': 'MSP_TripleEMA', 'source_name': '0DTE_Most_Stable_Profitable', 'source': 'LIVE_ENTRY_EMBED'},
+        ),
+    ]
+
+    all_pass = True
+    for embed, expected in tests:
+        result = parse_embed_signal(embed)
+        ok = result == expected
+        status = "PASS" if ok else "FAIL"
+        print(f"  [{status}] '{embed.title}' => {result}")
+        if not ok:
+            print(f"         expected: {expected}")
+            all_pass = False
+
+    return all_pass
+
+
+async def test_embed_scenario():
+    print(f"\n{'='*60}")
+    print("SCENARIO: Embed entry -> partial live exit")
+    print(f"{'='*60}")
+
+    from discord_watcher import TradeBot
+    executor = MockExecutor()
+
+    bot = TradeBot.__new__(TradeBot)
+    bot.executor = executor
+    bot.current_trade = None
+    bot.tp_count = 0
+    bot.open_embed_trades = {}
+
+    class FakeMessage:
+        content = ''
+
+        def __init__(self, embed):
+            self.embeds = [embed]
+
+    entry = FakeEmbed(
+        title="LIVE ENTRY — Most Stable MultiConf",
+        description="@admin\nCALL position opened on SPY $740.0 strike",
+        fields=[
+            ("Strike", "$740.0"),
+            ("Type", "CALL"),
+            ("Entry Price", "$0.78"),
+            ("Quantity", "3 contracts"),
+            ("Model ID", "MSP_TripleEMA"),
+            ("Source", "0DTE_Most_Stable_Profitable"),
+        ],
+    )
+    exit_embed = FakeEmbed(
+        title="LIVE EXIT — Most Stable MultiConf",
+        description="@admin\nTIMED OUT after 60 min — gained 5.2% ($+12.00)",
+        fields=[
+            ("Exit Reason", "Max Hold Time Reached"),
+            ("Strike", "$740.0 CALL"),
+            ("Entry Price", "$0.77"),
+            ("Exit Price", "$0.81"),
+            ("Qty", "2 contracts"),
+            ("SPY at Exit", "$740.14"),
+            ("Model ID", "MSP_TripleEMA"),
+            ("Source", "0DTE_Most_Stable_Profitable"),
+        ],
+    )
+
+    for embed in (entry, exit_embed):
+        signal = parse_message_signal(FakeMessage(embed))
+        print(f"  SIGNAL: {signal}")
+        await bot.handle_signal(signal)
+
+    trade_id = ('SPY', 740.0, 'CALLS', 'MSP_TripleEMA', '0DTE_Most_Stable_Profitable')
+    expected_calls = [
+        ('handle_signal', {'action': 'BUY', 'ticker': 'SPY', 'strike': 740.0, 'direction': 'CALLS', 'price': 0.78, 'qty': 3, 'trade_id': trade_id}),
+        ('handle_signal', {'action': 'SELL', 'ticker': 'SPY', 'strike': 740.0, 'direction': 'CALLS', 'price': 0.81, 'qty': 2, 'trade_id': trade_id}),
+    ]
+
+    open_trade = bot.open_embed_trades.get(trade_id)
+    ok = executor.calls == expected_calls and open_trade and open_trade.get('qty') == 1
+    print(f"\n  Executor calls made: {len(executor.calls)}")
+    for c in executor.calls:
+        print(f"    {c}")
+    print(f"  Remaining bot qty: {open_trade.get('qty') if open_trade else None}")
+    print(f"\n  Result: {'PASS' if ok else 'FAIL'}")
+    if not ok:
+        print(f"  Expected: {expected_calls}, remaining qty 1")
+    return ok
 
 
 # ── Bot logic tests ────────────────────────────────────────────────────────────
@@ -182,17 +335,21 @@ async def main():
     print("="*60)
 
     parse_ok = test_parse_signal()
+    embed_parse_ok = test_parse_embed_signal()
 
     scenario_results = await run_scenarios()
+    embed_scenario_ok = await test_embed_scenario()
 
     print("\n" + "="*60)
     print("SUMMARY")
     print("="*60)
     print(f"  parse_signal: {'PASS' if parse_ok else 'FAIL'}")
+    print(f"  parse_embed_signal: {'PASS' if embed_parse_ok else 'FAIL'}")
     for i, r in enumerate(scenario_results):
         print(f"  Scenario {i+1}:   {'PASS' if r else 'FAIL'}")
+    print(f"  Embed scenario: {'PASS' if embed_scenario_ok else 'FAIL'}")
 
-    all_ok = parse_ok and all(scenario_results)
+    all_ok = parse_ok and embed_parse_ok and all(scenario_results) and embed_scenario_ok
     print(f"\n  Overall: {'ALL PASS' if all_ok else 'SOME FAILURES'}")
     return 0 if all_ok else 1
 

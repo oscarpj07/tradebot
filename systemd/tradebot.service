@@ -1,0 +1,15 @@
+[Unit]
+Description=Tradebot Discord to Alpaca copier
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pjoscar126/tradebot
+ExecStart=/home/pjoscar126/tradebot/venv/bin/python /home/pjoscar126/tradebot/main.py
+Restart=always
+RestartSec=10
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=default.target

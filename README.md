@@ -79,11 +79,30 @@ CONTRACTS=1
 
 5. Run: `python main.py`
 
-## Running in Background
+## Running Continuously
+
+Use the user `systemd` service when the bot should keep running after the terminal closes and restart automatically if it crashes:
 
 ```bash
-nohup python main.py > bot.log 2>&1 &
+./scripts/install_service.sh
 ```
+
+Useful service commands:
+
+```bash
+./scripts/status_service.sh
+./scripts/logs_service.sh
+./scripts/stop_service.sh
+./scripts/start_service.sh
+```
+
+The service runs:
+
+```bash
+/home/pjoscar126/tradebot/venv/bin/python /home/pjoscar126/tradebot/main.py
+```
+
+Logs are available through `journalctl --user -u tradebot.service -f`.
 
 ## Disclaimer
 
