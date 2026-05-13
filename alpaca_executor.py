@@ -8,7 +8,7 @@ from config import ALPACA_API_KEY, ALPACA_SECRET_KEY, CONTRACTS
 from state_store import load_state, save_state_section
 
 log = logging.getLogger(__name__)
-TP_MONITOR_INTERVAL_SECONDS = 5
+TP_MONITOR_INTERVAL_SECONDS = 2
 
 
 class AlpacaExecutor:
