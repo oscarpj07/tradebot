@@ -1,19 +1,14 @@
 import logging
+import asyncio
 from datetime import date, timedelta
 from alpaca.trading.client import TradingClient
-from alpaca.trading.requests import (
-    GetOptionContractsRequest,
-    LimitOrderRequest,
-    MarketOrderRequest,
-    StopOrderRequest,
-    StopLossRequest,
-    TakeProfitRequest,
-)
-from alpaca.trading.enums import OrderSide, TimeInForce, AssetStatus, ContractType, OrderClass
+from alpaca.trading.requests import GetOptionContractsRequest, LimitOrderRequest, MarketOrderRequest, StopOrderRequest
+from alpaca.trading.enums import OrderSide, TimeInForce, AssetStatus, ContractType
 from config import ALPACA_API_KEY, ALPACA_SECRET_KEY, CONTRACTS
 from state_store import load_state, save_state_section
 
 log = logging.getLogger(__name__)
+TP_MONITOR_INTERVAL_SECONDS = 5
 
 
 class AlpacaExecutor:
@@ -115,6 +110,14 @@ class AlpacaExecutor:
         except Exception:
             return 0
 
+    def _position_current_price(self, symbol):
+        try:
+            position = self.client.get_open_position(symbol)
+            return float(position.current_price)
+        except Exception as e:
+            log.warning(f"Could not read current price for {symbol}: {e}")
+            return None
+
     def _cancel_exit_order_group(self, symbol, stop_loss_price, take_profit_price=None):
         keys = self._matching_exit_keys(symbol, stop_loss_price, take_profit_price)
         order_ids = {
@@ -154,29 +157,6 @@ class AlpacaExecutor:
             log.warning(f"State qty {state_qty} for {symbol} exceeds Alpaca held qty {held_qty}; capping exit orders to {qty}")
 
         try:
-            if take_profit_price:
-                order = LimitOrderRequest(
-                    symbol=symbol,
-                    qty=qty,
-                    side=OrderSide.SELL,
-                    time_in_force=TimeInForce.DAY,
-                    limit_price=round(take_profit_price, 2),
-                    order_class=OrderClass.OCO,
-                    take_profit=TakeProfitRequest(limit_price=round(take_profit_price, 2)),
-                    stop_loss=StopLossRequest(stop_price=round(stop_loss_price, 2)),
-                )
-                response = self.client.submit_order(order)
-                for key in keys:
-                    self.open_positions[key]["exit_order_id"] = str(response.id)
-                    self.open_positions[key]["take_profit_order_id"] = str(response.id)
-                    self.open_positions[key]["stop_order_id"] = None
-                self._save_open_positions()
-                log.info(
-                    f"[ALPACA PAPER] TAKE PROFIT / STOP LOSS placed {qty}x {symbol} "
-                    f"TP ${take_profit_price} / SL ${stop_loss_price} — Order ID: {response.id}"
-                )
-                return
-
             order = StopOrderRequest(
                 symbol=symbol,
                 qty=qty,
@@ -194,10 +174,7 @@ class AlpacaExecutor:
                 f"@ ${stop_loss_price} — Order ID: {response.id}"
             )
         except Exception as e:
-            log.error(f"Exit order failed for {symbol} TP ${take_profit_price} / SL ${stop_loss_price}: {e}")
-            if take_profit_price:
-                log.warning(f"Falling back to stop-loss only for {symbol} @ ${stop_loss_price}")
-                self._submit_exit_order_group(symbol, stop_loss_price, None)
+            log.error(f"Stop loss order failed for {symbol} @ ${stop_loss_price}: {e}")
 
     def _refresh_exit_order_group(self, symbol, stop_loss_price, take_profit_price=None):
         self._cancel_exit_order_group(symbol, stop_loss_price, take_profit_price)
@@ -218,6 +195,64 @@ class AlpacaExecutor:
         if not group:
             return
         self._cancel_exit_order_group(*group)
+
+    async def monitor_take_profits(self):
+        while True:
+            await asyncio.sleep(TP_MONITOR_INTERVAL_SECONDS)
+            await self.check_take_profits()
+
+    async def check_take_profits(self):
+        for key, position in list(self.open_positions.items()):
+            if not isinstance(position, dict) or not position.get("take_profit_price"):
+                continue
+
+            symbol = position.get("symbol")
+            take_profit_price = float(position["take_profit_price"])
+            current_price = self._position_current_price(symbol)
+            if current_price is None:
+                continue
+
+            if current_price >= take_profit_price:
+                log.info(
+                    f"TAKE PROFIT hit for {symbol}: current ${current_price} "
+                    f">= target ${take_profit_price}"
+                )
+                await self._sell_position_for_take_profit(key, current_price)
+
+    async def _sell_position_for_take_profit(self, key, current_price):
+        position = self.open_positions.get(key)
+        if not isinstance(position, dict):
+            return
+
+        symbol = position["symbol"]
+        qty = min(int(position.get("qty", CONTRACTS)), self._held_qty(symbol))
+        if qty <= 0:
+            log.warning(f"TP monitor found no Alpaca position left for {symbol}; clearing state")
+            del self.open_positions[key]
+            self._save_open_positions()
+            return
+
+        self._cancel_exit_orders_for_position(key)
+        order = MarketOrderRequest(
+            symbol=symbol,
+            qty=qty,
+            side=OrderSide.SELL,
+            time_in_force=TimeInForce.DAY,
+        )
+
+        try:
+            response = self.client.submit_order(order)
+            log.info(
+                f"[ALPACA PAPER] TAKE PROFIT SELL {qty}x {symbol} "
+                f"@ market after reaching ${current_price} — Order ID: {response.id}"
+            )
+            del self.open_positions[key]
+            self._save_open_positions()
+        except Exception as e:
+            log.error(f"Take-profit sell failed for {symbol}: {e}")
+            group = self._exit_group(position)
+            if group:
+                self._submit_exit_order_group(*group)
 
     async def handle_signal(self, signal):
         ticker = signal["ticker"]

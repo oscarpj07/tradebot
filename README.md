@@ -39,7 +39,7 @@ Model ID: MSP_TripleEMA
 Source: 0DTE_Most_Stable_Profitable
 ```
 
-That becomes an Alpaca paper `BUY` order for 3 SPY 740 calls. If the entry includes `Take Profit` and `Stop Loss` dollar prices, the bot also tries to place an Alpaca OCO exit order: a sell limit at the take-profit price and a sell stop at the stop-loss price. If Alpaca rejects OCO for the option contract, the bot falls back to the stop-loss order so downside protection is still attempted.
+That becomes an Alpaca paper `BUY` order for 3 SPY 740 calls. If the entry includes `Take Profit` and `Stop Loss` dollar prices, the bot keeps the stop loss live as an Alpaca stop order and monitors the option's current price for the take-profit level. When the current price reaches the take-profit price, the bot cancels the stop and sells the contract at market.
 
 ### Live Exit
 
@@ -61,7 +61,7 @@ Source: 0DTE_Most_Stable_Profitable
 
 That becomes an Alpaca paper `SELL` order for 2 contracts. If the original entry had 3 contracts, the bot keeps 1 contract open internally.
 
-If the broker-side take-profit or stop-loss has already closed the option before a `LIVE EXIT` arrives, the bot checks the live Alpaca position quantity first and clears stale local state instead of sending another sell.
+If the broker-side stop loss or bot-side take profit has already closed the option before a `LIVE EXIT` arrives, the bot checks the live Alpaca position quantity first and clears stale local state instead of sending another sell.
 
 ## Trade Matching
 

@@ -31,6 +31,7 @@ async def main():
     try:
         executor = AlpacaExecutor()
         executor.connect()
+        asyncio.create_task(executor.monitor_take_profits())
         bot = TradeBot(executor)
         await bot.start_bot()
     finally:

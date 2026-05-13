@@ -30,6 +30,33 @@ class MockExecutor:
         log.info(f"  [MOCK] close_position: {ticker} {strike} {direction} {order_type}")
 
 
+class FakeOrderResponse:
+    id = "mock-order-id"
+
+
+class FakePosition:
+    def __init__(self, qty, current_price):
+        self.qty = str(qty)
+        self.current_price = str(current_price)
+
+
+class FakeAlpacaClient:
+    def __init__(self, qty=1, current_price=5.00):
+        self.position = FakePosition(qty, current_price)
+        self.cancelled = []
+        self.orders = []
+
+    def get_open_position(self, symbol):
+        return self.position
+
+    def cancel_order_by_id(self, order_id):
+        self.cancelled.append(order_id)
+
+    def submit_order(self, order):
+        self.orders.append(order)
+        return FakeOrderResponse()
+
+
 class FakeField:
     def __init__(self, name, value):
         self.name = name
@@ -216,6 +243,42 @@ async def test_embed_scenario():
     return ok
 
 
+async def test_take_profit_monitor():
+    print(f"\n{'='*60}")
+    print("SCENARIO: Bot-side take-profit monitor")
+    print(f"{'='*60}")
+
+    from alpaca_executor import AlpacaExecutor
+
+    trade_id = ('SPY', 737.0, 'CALLS', 'MSP_TripleEMA', '0DTE_Most_Stable_Profitable')
+    executor = AlpacaExecutor.__new__(AlpacaExecutor)
+    executor.client = FakeAlpacaClient(qty=1, current_price=4.68)
+    executor.open_positions = {
+        trade_id: {
+            'symbol': 'SPY260513C00737000',
+            'qty': 1,
+            'take_profit_price': 4.68,
+            'stop_loss_price': 0.31,
+            'exit_order_id': 'existing-stop-id',
+            'stop_order_id': 'existing-stop-id',
+            'take_profit_order_id': None,
+        }
+    }
+    executor._save_open_positions = lambda: None
+
+    await executor.check_take_profits()
+
+    ok = (
+        trade_id not in executor.open_positions and
+        executor.client.cancelled == ['existing-stop-id'] and
+        len(executor.client.orders) == 1
+    )
+    print(f"  Cancelled orders: {executor.client.cancelled}")
+    print(f"  Submitted orders: {len(executor.client.orders)}")
+    print(f"\n  Result: {'PASS' if ok else 'FAIL'}")
+    return ok
+
+
 # ── Bot logic tests ────────────────────────────────────────────────────────────
 
 async def test_scenario(name, messages, expected_calls):
@@ -344,6 +407,7 @@ async def main():
 
     scenario_results = await run_scenarios()
     embed_scenario_ok = await test_embed_scenario()
+    tp_monitor_ok = await test_take_profit_monitor()
 
     print("\n" + "="*60)
     print("SUMMARY")
@@ -353,8 +417,9 @@ async def main():
     for i, r in enumerate(scenario_results):
         print(f"  Scenario {i+1}:   {'PASS' if r else 'FAIL'}")
     print(f"  Embed scenario: {'PASS' if embed_scenario_ok else 'FAIL'}")
+    print(f"  TP monitor:     {'PASS' if tp_monitor_ok else 'FAIL'}")
 
-    all_ok = parse_ok and embed_parse_ok and all(scenario_results) and embed_scenario_ok
+    all_ok = parse_ok and embed_parse_ok and all(scenario_results) and embed_scenario_ok and tp_monitor_ok
     print(f"\n  Overall: {'ALL PASS' if all_ok else 'SOME FAILURES'}")
     return 0 if all_ok else 1
 
