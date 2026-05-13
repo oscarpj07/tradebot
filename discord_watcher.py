@@ -3,6 +3,7 @@ import logging
 import discord
 from config import DISCORD_TOKEN, DISCORD_CHANNEL_ID
 from trade_executor import TradeExecutor
+from state_store import load_state, save_state_section
 
 log = logging.getLogger(__name__)
 
@@ -10,6 +11,11 @@ log = logging.getLogger(__name__)
 def _parse_price(value):
     match = re.search(r'\$?([+-]?\d+(?:\.\d+)?)', value or '')
     return float(match.group(1)) if match else None
+
+
+def _parse_dollar_price(value):
+    matches = re.findall(r'\$\s*([+-]?\d+(?:\.\d+)?)', value or '')
+    return float(matches[-1]) if matches else None
 
 
 def _plural_direction(value):
@@ -123,6 +129,7 @@ def parse_embed_signal(embed):
         )
         price = _parse_price(fields.get('ENTRY PRICE'))
         qty = _parse_qty(fields.get('QUANTITY') or fields.get('QTY'))
+        stop_loss_price = _parse_dollar_price(fields.get('STOP LOSS'))
         model_id = fields.get('MODEL ID')
         source_name = fields.get('SOURCE')
 
@@ -134,6 +141,7 @@ def parse_embed_signal(embed):
                 'direction': direction,
                 'price': price,
                 'qty': qty,
+                'stop_loss_price': stop_loss_price,
                 'model_id': model_id,
                 'source_name': source_name,
                 'source': 'LIVE_ENTRY_EMBED',
@@ -191,7 +199,23 @@ class TradeBot(discord.Client):
         # Track current open trade state
         self.current_trade = None  # dict with trade info
         self.tp_count = 0          # number of TPs received for current trade
-        self.open_embed_trades = {}
+        self.open_embed_trades = self._load_open_embed_trades()
+
+    def _load_open_embed_trades(self):
+        trades = {}
+        for item in load_state().get("open_embed_trades", []):
+            key = tuple(item["key"]) if isinstance(item.get("key"), list) else item.get("key")
+            trades[key] = item["trade"]
+        return trades
+
+    def _save_open_embed_trades(self):
+        items = []
+        for key, trade in self.open_embed_trades.items():
+            items.append({
+                "key": list(key) if isinstance(key, tuple) else key,
+                "trade": trade,
+            })
+        save_state_section("open_embed_trades", items)
 
     async def on_ready(self):
         log.info(f"Logged in as {self.user}")
@@ -333,6 +357,7 @@ class TradeBot(discord.Client):
                 return
 
             self.open_embed_trades[key] = signal.copy()
+            self._save_open_embed_trades()
             order_signal = {
                 'ticker': signal['ticker'],
                 'strike': signal['strike'],
@@ -343,6 +368,8 @@ class TradeBot(discord.Client):
             }
             if signal.get('qty'):
                 order_signal['qty'] = signal['qty']
+            if signal.get('stop_loss_price'):
+                order_signal['stop_loss_price'] = signal['stop_loss_price']
 
             log.info(f"LIVE ENTRY — buying {order_signal.get('qty', 'configured')} contract(s) for {key}")
             await self.executor.handle_signal(order_signal)
@@ -351,8 +378,20 @@ class TradeBot(discord.Client):
         if signal['type'] == 'EXIT':
             trade = self.open_embed_trades.get(key)
             if not trade:
-                log.warning(f"LIVE EXIT received but no matching open embed trade for {key} — ignoring")
-                return
+                candidates = [
+                    (candidate_key, candidate_trade)
+                    for candidate_key, candidate_trade in self.open_embed_trades.items()
+                    if (
+                        candidate_trade.get('ticker') == signal.get('ticker') and
+                        candidate_trade.get('strike') == signal.get('strike') and
+                        candidate_trade.get('direction') == signal.get('direction')
+                    )
+                ]
+                if len(candidates) != 1:
+                    log.warning(f"LIVE EXIT received but no matching open embed trade for {key} — ignoring")
+                    return
+                key, trade = candidates[0]
+                log.warning(f"LIVE EXIT for {signal.get('model_id')} matched fallback open trade {key}")
 
             qty = signal.get('qty') or trade.get('qty')
             price = signal.get('price') or trade['price']
@@ -374,9 +413,11 @@ class TradeBot(discord.Client):
                 remaining = trade['qty'] - qty
                 if remaining > 0:
                     trade['qty'] = remaining
+                    self._save_open_embed_trades()
                     return
 
             del self.open_embed_trades[key]
+            self._save_open_embed_trades()
 
     async def start_bot(self):
         await self.start(DISCORD_TOKEN)
