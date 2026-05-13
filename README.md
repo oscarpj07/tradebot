@@ -7,6 +7,7 @@ A Python trading bot that monitors a Discord channel for live options trade embe
 - Monitors one configured Discord channel in real time
 - Reads Discord embed alerts, not just plain message text
 - Opens option positions from `LIVE ENTRY` embeds
+- Places broker-side exit protection from entry embeds when prices are supplied
 - Sells option contracts from `LIVE EXIT` embeds
 - Uses the quantity shown in each embed
 - Tracks separate trades by ticker, strike, direction, model ID, and source
@@ -32,11 +33,13 @@ Strike: $740.0
 Type: CALL
 Entry Price: $0.78
 Quantity: 3 contracts
+Take Profit: +100% ($1.56)
+Stop Loss: -80% ($0.16)
 Model ID: MSP_TripleEMA
 Source: 0DTE_Most_Stable_Profitable
 ```
 
-That becomes an Alpaca paper `BUY` order for 3 SPY 740 calls.
+That becomes an Alpaca paper `BUY` order for 3 SPY 740 calls. If the entry includes `Take Profit` and `Stop Loss` dollar prices, the bot also tries to place an Alpaca OCO exit order: a sell limit at the take-profit price and a sell stop at the stop-loss price. If Alpaca rejects OCO for the option contract, the bot falls back to the stop-loss order so downside protection is still attempted.
 
 ### Live Exit
 
@@ -57,6 +60,8 @@ Source: 0DTE_Most_Stable_Profitable
 ```
 
 That becomes an Alpaca paper `SELL` order for 2 contracts. If the original entry had 3 contracts, the bot keeps 1 contract open internally.
+
+If the broker-side take-profit or stop-loss has already closed the option before a `LIVE EXIT` arrives, the bot checks the live Alpaca position quantity first and clears stale local state instead of sending another sell.
 
 ## Trade Matching
 

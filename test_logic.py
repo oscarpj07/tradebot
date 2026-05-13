@@ -92,7 +92,7 @@ def test_parse_embed_signal():
                     ("Source", "0DTE_V3_MegaGrid"),
                 ],
             ),
-            {'type': 'ENTRY', 'ticker': 'SPY', 'strike': 373.0, 'direction': 'PUTS', 'price': 1.80, 'qty': 1, 'stop_loss_price': 1.44, 'model_id': 'MG_LowDD', 'source_name': '0DTE_V3_MegaGrid', 'source': 'LIVE_ENTRY_EMBED'},
+            {'type': 'ENTRY', 'ticker': 'SPY', 'strike': 373.0, 'direction': 'PUTS', 'price': 1.80, 'qty': 1, 'take_profit_price': 3.60, 'stop_loss_price': 1.44, 'model_id': 'MG_LowDD', 'source_name': '0DTE_V3_MegaGrid', 'source': 'LIVE_ENTRY_EMBED'},
         ),
         (
             FakeEmbed(
@@ -120,12 +120,13 @@ def test_parse_embed_signal():
                     ("Type", "CALL"),
                     ("Entry Price", "$0.78"),
                     ("Quantity", "3 contracts"),
+                    ("Take Profit", "+100% ($1.56)"),
                     ("Stop Loss", "-80% ($0.16)"),
                     ("Model ID", "MSP_TripleEMA"),
                     ("Source", "0DTE_Most_Stable_Profitable"),
                 ],
             ),
-            {'type': 'ENTRY', 'ticker': 'SPY', 'strike': 740.0, 'direction': 'CALLS', 'price': 0.78, 'qty': 3, 'stop_loss_price': 0.16, 'model_id': 'MSP_TripleEMA', 'source_name': '0DTE_Most_Stable_Profitable', 'source': 'LIVE_ENTRY_EMBED'},
+            {'type': 'ENTRY', 'ticker': 'SPY', 'strike': 740.0, 'direction': 'CALLS', 'price': 0.78, 'qty': 3, 'take_profit_price': 1.56, 'stop_loss_price': 0.16, 'model_id': 'MSP_TripleEMA', 'source_name': '0DTE_Most_Stable_Profitable', 'source': 'LIVE_ENTRY_EMBED'},
         ),
     ]
 
@@ -171,6 +172,7 @@ async def test_embed_scenario():
             ("Type", "CALL"),
             ("Entry Price", "$0.78"),
             ("Quantity", "3 contracts"),
+            ("Take Profit", "+100% ($1.56)"),
             ("Stop Loss", "-80% ($0.16)"),
             ("Model ID", "MSP_TripleEMA"),
             ("Source", "0DTE_Most_Stable_Profitable"),
@@ -198,7 +200,7 @@ async def test_embed_scenario():
 
     trade_id = ('SPY', 740.0, 'CALLS', 'MSP_TripleEMA', '0DTE_Most_Stable_Profitable')
     expected_calls = [
-        ('handle_signal', {'action': 'BUY', 'ticker': 'SPY', 'strike': 740.0, 'direction': 'CALLS', 'price': 0.78, 'qty': 3, 'stop_loss_price': 0.16, 'trade_id': trade_id}),
+        ('handle_signal', {'action': 'BUY', 'ticker': 'SPY', 'strike': 740.0, 'direction': 'CALLS', 'price': 0.78, 'qty': 3, 'take_profit_price': 1.56, 'stop_loss_price': 0.16, 'trade_id': trade_id}),
         ('handle_signal', {'action': 'SELL', 'ticker': 'SPY', 'strike': 740.0, 'direction': 'CALLS', 'price': 0.81, 'qty': 2, 'trade_id': trade_id}),
     ]
 

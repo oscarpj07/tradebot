@@ -129,6 +129,7 @@ def parse_embed_signal(embed):
         )
         price = _parse_price(fields.get('ENTRY PRICE'))
         qty = _parse_qty(fields.get('QUANTITY') or fields.get('QTY'))
+        take_profit_price = _parse_dollar_price(fields.get('TAKE PROFIT'))
         stop_loss_price = _parse_dollar_price(fields.get('STOP LOSS'))
         model_id = fields.get('MODEL ID')
         source_name = fields.get('SOURCE')
@@ -141,6 +142,7 @@ def parse_embed_signal(embed):
                 'direction': direction,
                 'price': price,
                 'qty': qty,
+                'take_profit_price': take_profit_price,
                 'stop_loss_price': stop_loss_price,
                 'model_id': model_id,
                 'source_name': source_name,
@@ -370,6 +372,8 @@ class TradeBot(discord.Client):
                 order_signal['qty'] = signal['qty']
             if signal.get('stop_loss_price'):
                 order_signal['stop_loss_price'] = signal['stop_loss_price']
+            if signal.get('take_profit_price'):
+                order_signal['take_profit_price'] = signal['take_profit_price']
 
             log.info(f"LIVE ENTRY — buying {order_signal.get('qty', 'configured')} contract(s) for {key}")
             await self.executor.handle_signal(order_signal)
