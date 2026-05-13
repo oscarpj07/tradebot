@@ -26,11 +26,15 @@ def _parse_qty(value):
     return int(match.group(1)) if match else None
 
 
+def _clean_field_value(value):
+    return str(value or '').strip().strip('`').strip()
+
+
 def _field_map(embed):
     fields = {}
     for field in getattr(embed, 'fields', []):
         name = re.sub(r'[^A-Za-z ]+', '', getattr(field, 'name', '')).strip().upper()
-        fields[name] = str(getattr(field, 'value', '')).strip()
+        fields[name] = _clean_field_value(getattr(field, 'value', ''))
     return fields
 
 
@@ -104,14 +108,16 @@ def parse_embed_signal(embed):
     haystack = f"{title}\n{description}".upper()
 
     if 'LIVE ENTRY' in haystack or 'POSITION OPENED' in haystack:
-        desc_match = re.search(
-            r'\b(CALL|PUT)\s+position opened on\s+([A-Z]{1,5})\s+\$?(\d+(?:\.\d+)?)\s+strike',
-            description,
-            re.IGNORECASE
+        plain_description = re.sub(r'[*_`]', '', description)
+        desc_match = re.search(r'\b(CALL|PUT)\b', plain_description, re.IGNORECASE)
+        ticker_match = re.search(
+            r'\bon\s+([A-Z]{1,5})\s+\$?(\d+(?:\.\d+)?)\s+strike',
+            plain_description,
+            re.IGNORECASE,
         )
 
-        ticker = desc_match.group(2).upper() if desc_match else None
-        strike = _parse_price(fields.get('STRIKE')) or (float(desc_match.group(3)) if desc_match else None)
+        ticker = ticker_match.group(1).upper() if ticker_match else None
+        strike = _parse_price(fields.get('STRIKE')) or (float(ticker_match.group(2)) if ticker_match else None)
         direction = _plural_direction(fields.get('TYPE')) or (
             _plural_direction(desc_match.group(1)) if desc_match else None
         )
@@ -197,6 +203,9 @@ class TradeBot(discord.Client):
 
         signal = parse_message_signal(message)
         if not signal:
+            if getattr(message, 'embeds', None):
+                titles = [getattr(embed, 'title', '') for embed in message.embeds]
+                log.info(f"Message had embeds but no parseable trade signal: {titles}")
             return
 
         log.info(f"Signal detected: {signal}")

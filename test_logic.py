@@ -80,7 +80,7 @@ def test_parse_embed_signal():
         (
             FakeEmbed(
                 title="LIVE ENTRY — MegaGrid Low DD Champion",
-                description="@admin\nPUT position opened on SPY $373.0 strike",
+                description="@admin\n**📉 PUT** position opened on **SPY $373.0** strike",
                 fields=[
                     ("Strike", "$373.0"),
                     ("Type", "PUT"),
@@ -114,7 +114,7 @@ def test_parse_embed_signal():
         (
             FakeEmbed(
                 title="LIVE ENTRY — Most Stable MultiConf",
-                description="@admin\nCALL position opened on SPY $740.0 strike",
+                description="@admin\n**📈 CALL** position opened on **SPY $740.0** strike",
                 fields=[
                     ("Strike", "$740.0"),
                     ("Type", "CALL"),
@@ -163,7 +163,7 @@ async def test_embed_scenario():
 
     entry = FakeEmbed(
         title="LIVE ENTRY — Most Stable MultiConf",
-        description="@admin\nCALL position opened on SPY $740.0 strike",
+        description="@admin\n**📈 CALL** position opened on **SPY $740.0** strike",
         fields=[
             ("Strike", "$740.0"),
             ("Type", "CALL"),
